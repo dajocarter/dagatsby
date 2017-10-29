@@ -1,7 +1,6 @@
 import React from "react";
 import Helmet from "react-helmet";
 import Link from "gatsby-link";
-import Bio from "../components/Bio";
 
 const BlogPostTemplate = ({ data }) => (
   <div className="post">
@@ -13,7 +12,6 @@ const BlogPostTemplate = ({ data }) => (
     <p>{data.markdownRemark.frontmatter.date}</p>
     <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
     <hr />
-    <Bio />
   </div>
 );
 

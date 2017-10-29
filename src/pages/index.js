@@ -1,12 +1,10 @@
 import React from "react";
 import Link from "gatsby-link";
 import Helmet from "react-helmet";
-import Bio from "../components/Bio";
 
 const BlogIndex = ({ data }) => (
   <div>
     <Helmet title={data.site.siteMetadata.title} />
-    <Bio />
     {data.allMarkdownRemark.edges.map(({ node }) => (
       <div key={node.frontmatter.slug}>
         <h3>
