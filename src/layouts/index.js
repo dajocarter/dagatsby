@@ -1,36 +1,32 @@
 import React from "react";
 import Link from "gatsby-link";
+import "./index.scss";
+import "./Header.scss";
 
-class Template extends React.Component {
-  render() {
-    const { location, children } = this.props;
-    let header;
-    if (location.pathname === "/") {
-      header = (
-        <h1>
-          <Link to={"/"}>Gatsby Starter Blog</Link>
-        </h1>
-      );
-    } else {
-      header = (
-        <h3>
-          <Link to={"/"}>Gatsby Starter Blog</Link>
-        </h3>
-      );
-    }
-    return (
-      <div>
-        {header}
-        {children()}
-      </div>
-    );
-  }
-}
+const Header = props => (
+  <header>
+    {props.location.pathname === "/" ? (
+      <h1>
+        <Link to={"/"}>Gatsby Starter Blog</Link>
+      </h1>
+    ) : (
+      <h3>
+        <Link to={"/"}>Gatsby Starter Blog</Link>
+      </h3>
+    )}
+  </header>
+);
+
+const Template = ({ location, children }) => (
+  <div>
+    <Header location={location} />
+    {children()}
+  </div>
+);
 
 Template.propTypes = {
   children: React.PropTypes.func,
-  location: React.PropTypes.object,
-  route: React.PropTypes.object
+  location: React.PropTypes.object
 };
 
 export default Template;
