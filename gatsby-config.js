@@ -49,6 +49,7 @@ module.exports = {
         fonts: ["Lato:300,400,700"]
       }
     },
-    `gatsby-plugin-sass`
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-styled-components`
   ]
 };
