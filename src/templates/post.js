@@ -20,14 +20,14 @@ const BlogPostTemplate = ({ data }) => (
 export default BlogPostTemplate;
 
 export const pageQuery = graphql`
-  query BlogPostByPath($path: String!) {
+  query BlogPostBySlug($slug: String!) {
     site {
       siteMetadata {
         title
         author
       }
     }
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       id
       html
       frontmatter {

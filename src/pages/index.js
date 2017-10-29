@@ -7,17 +7,17 @@ const BlogIndex = ({ data }) => (
   <div>
     <Helmet title={data.site.siteMetadata.title} />
     <Bio />
-    {data.allMarkdownRemark.edges
-      .filter(({ node }) => node.path !== "/404/")
-      .map(({ node }) => (
-        <div key={node.frontmatter.path}>
-          <h3>
-            <Link to={node.frontmatter.path}>{node.frontmatter.title}</Link>
-          </h3>
-          <small>{node.frontmatter.date}</small>
-          <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-        </div>
-      ))}
+    {data.allMarkdownRemark.edges.map(({ node }) => (
+      <div key={node.frontmatter.slug}>
+        <h3>
+          <Link to={`/posts/${node.frontmatter.slug}`}>
+            {node.frontmatter.title}
+          </Link>
+        </h3>
+        <small>{node.frontmatter.date}</small>
+        <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+      </div>
+    ))}
   </div>
 );
 
@@ -39,7 +39,7 @@ export const pageQuery = graphql`
         node {
           excerpt
           frontmatter {
-            path
+            slug
             date(formatString: "DD MMMM, YYYY")
           }
           frontmatter {

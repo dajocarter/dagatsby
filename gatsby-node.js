@@ -12,7 +12,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
               edges {
                 node {
                   frontmatter {
-                    path
+                    slug
                   }
                 }
               }
@@ -28,10 +28,10 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
         // Create blog posts pages.
         result.data.allMarkdownRemark.edges.forEach(({ node }) => {
           createPage({
-            path: node.frontmatter.path,
+            path: `/posts/${node.frontmatter.slug}`,
             component: postTemplate,
             context: {
-              path: node.frontmatter.path
+              slug: node.frontmatter.slug
             }
           });
         });
