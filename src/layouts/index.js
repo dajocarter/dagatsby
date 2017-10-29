@@ -20,7 +20,7 @@ const Header = props => (
 const Template = ({ location, children }) => (
   <div>
     <Header location={location} />
-    {children()}
+    <main>{children()}</main>
   </div>
 );
 
