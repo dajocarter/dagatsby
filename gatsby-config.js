@@ -48,6 +48,7 @@ module.exports = {
       options: {
         fonts: ["Lato"]
       }
-    }
+    },
+    `gatsby-plugin-styled-components`
   ]
 };
