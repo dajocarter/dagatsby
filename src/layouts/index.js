@@ -1,26 +1,46 @@
 import React from "react";
 import Link from "gatsby-link";
+import styled from "styled-components";
 import "./index.scss";
-import "./Header.scss";
 
-const Header = props => (
-  <header>
-    {props.location.pathname === "/" ? (
-      <h1>
-        <Link to={"/"}>Gatsby Starter Blog</Link>
-      </h1>
-    ) : (
-      <h3>
-        <Link to={"/"}>Gatsby Starter Blog</Link>
-      </h3>
-    )}
-  </header>
-);
+const Header = styled.header`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: navy;
+  padding: 10px;
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+`;
+
+const LogoHeader = styled.h1`
+  float: left;
+  margin: 0;
+`;
+
+const LogoLink = styled(Link)`
+  color: white;
+  font-weight: 300;
+  text-decoration: none;
+`;
+
+const Main = styled.main`
+  margin-top: 60px;
+  padding: 10px;
+`;
 
 const Template = ({ location, children }) => (
   <div>
-    <Header location={location} />
-    <main>{children()}</main>
+    <Header>
+      <LogoHeader>
+        <LogoLink to="/">David Carter</LogoLink>
+      </LogoHeader>
+    </Header>
+    <Main>{children()}</Main>
   </div>
 );
 
