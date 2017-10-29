@@ -49,6 +49,6 @@ module.exports = {
         fonts: ["Lato"]
       }
     },
-    `gatsby-plugin-styled-components`
+    `gatsby-plugin-sass`
   ]
 };
