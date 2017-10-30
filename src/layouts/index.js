@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "gatsby-link";
+import StyledLink from "../components/StyledLink";
 import styled from "styled-components";
 import "./index.scss";
 
@@ -8,6 +8,7 @@ const Header = styled.header`
   top: 0;
   left: 0;
   right: 0;
+  background-color: #04052e;
   padding: 2rem;
   &:after {
     content: "";
@@ -21,13 +22,8 @@ const LogoHeader = styled.h1`
   margin: 0;
 `;
 
-const LogoLink = styled(Link)`
-  color: #4ecdc4;
+const LogoLink = StyledLink.extend`
   font-weight: 300;
-  text-decoration: none;
-  &:hover {
-    color: #ff6b6b;
-  }
 `;
 
 const Main = styled.main`
