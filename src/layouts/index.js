@@ -8,8 +8,7 @@ const Header = styled.header`
   top: 0;
   left: 0;
   right: 0;
-  background: navy;
-  padding: 10px;
+  padding: 2rem;
   &:after {
     content: "";
     display: table;
@@ -23,14 +22,18 @@ const LogoHeader = styled.h1`
 `;
 
 const LogoLink = styled(Link)`
-  color: white;
+  color: #4ecdc4;
   font-weight: 300;
   text-decoration: none;
+  &:hover {
+    color: #ff6b6b;
+  }
 `;
 
 const Main = styled.main`
-  margin-top: 60px;
-  padding: 10px;
+  margin-top: 100px;
+  padding: 2rem;
+  min-height: calc(100vh - 164px);
 `;
 
 const Template = ({ location, children }) => (

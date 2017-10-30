@@ -1,6 +1,15 @@
 import React from "react";
 import Link from "gatsby-link";
 import Helmet from "react-helmet";
+import styled from "styled-components";
+
+const ActionLink = styled(Link)`
+  color: #4ecdc4;
+  text-decoration: none;
+  &:hover {
+    color: #ff6b6b;
+  }
+`;
 
 const Index = ({ data }) => (
   <div>
@@ -9,6 +18,11 @@ const Index = ({ data }) => (
     <h3>
       I'm passionate about building responsive websites for small businesses.
     </h3>
+    <p>
+      <ActionLink to={`/`}>Download my resume</ActionLink>,{" "}
+      <ActionLink to={`/projects/`}>check out my work</ActionLink>, and{" "}
+      <ActionLink to={`/posts/`}>take a look at some of my posts</ActionLink>.
+    </p>
   </div>
 );
 
