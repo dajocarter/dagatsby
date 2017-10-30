@@ -52,7 +52,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
 
         result.data.pages.edges.forEach(({ node }) => {
           createPage({
-            path: `/${node.frontmatter.slug}`,
+            path: `/${node.frontmatter.slug}/`,
             component: pageTemplate,
             context: {
               slug: node.frontmatter.slug
@@ -62,7 +62,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
 
         result.data.posts.edges.forEach(({ node }) => {
           createPage({
-            path: `/posts/${node.frontmatter.slug}`,
+            path: `/posts/${node.frontmatter.slug}/`,
             component: postTemplate,
             context: {
               slug: node.frontmatter.slug
@@ -72,7 +72,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
 
         result.data.projects.edges.forEach(({ node }) => {
           createPage({
-            path: `/projects/${node.frontmatter.slug}`,
+            path: `/projects/${node.frontmatter.slug}/`,
             component: projectTemplate,
             context: {
               slug: node.frontmatter.slug
