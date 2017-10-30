@@ -2,48 +2,27 @@ import React from "react";
 import Link from "gatsby-link";
 import Helmet from "react-helmet";
 
-const BlogIndex = ({ data }) => (
+const Index = ({ data }) => (
   <div>
     <Helmet title={data.site.siteMetadata.title} />
-    {data.allMarkdownRemark.edges.map(({ node }) => (
-      <div key={node.frontmatter.slug}>
-        <h3>
-          <Link to={`/posts/${node.frontmatter.slug}`}>
-            {node.frontmatter.title}
-          </Link>
-        </h3>
-        <small>{node.frontmatter.date}</small>
-        <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-      </div>
-    ))}
+    <h1>Hi, I'm David Carter.</h1>
+    <h3>
+      I'm passionate about building responsive websites for small businesses.
+    </h3>
   </div>
 );
 
-BlogIndex.propTypes = {
+Index.propTypes = {
   route: React.PropTypes.object
 };
 
-export default BlogIndex;
+export default Index;
 
 export const pageQuery = graphql`
   query IndexQuery {
     site {
       siteMetadata {
         title
-      }
-    }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          excerpt
-          frontmatter {
-            slug
-            date(formatString: "DD MMMM, YYYY")
-          }
-          frontmatter {
-            title
-          }
-        }
       }
     }
   }
