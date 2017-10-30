@@ -1,22 +1,21 @@
 import React from "react";
 import Helmet from "react-helmet";
 
-const Post = ({ data }) => (
+const Page = ({ data }) => (
   <div>
     <Helmet
       title={`${data.markdownRemark.frontmatter.title} | ${data.site
         .siteMetadata.title}`}
     />
     <h1>{data.markdownRemark.frontmatter.title}</h1>
-    <p>{data.markdownRemark.frontmatter.date}</p>
     <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
   </div>
 );
 
-export default Post;
+export default Page;
 
 export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!) {
+  query PageBySlug($slug: String!) {
     site {
       siteMetadata {
         title
@@ -28,7 +27,6 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
       }
     }
   }

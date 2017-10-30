@@ -1,7 +1,7 @@
 import React from "react";
 import Helmet from "react-helmet";
 
-const Post = ({ data }) => (
+const Project = ({ data }) => (
   <div>
     <Helmet
       title={`${data.markdownRemark.frontmatter.title} | ${data.site
@@ -13,10 +13,10 @@ const Post = ({ data }) => (
   </div>
 );
 
-export default Post;
+export default Project;
 
 export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!) {
+  query ProjectBySlug($slug: String!) {
     site {
       siteMetadata {
         title
