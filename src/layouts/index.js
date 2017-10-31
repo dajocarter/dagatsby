@@ -10,10 +10,14 @@ const Header = styled.header`
   left: 0;
   right: 0;
   display: flex;
+  flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
   background-color: #04052e;
   padding: 2rem;
+  @media (max-width: 499px) {
+    justify-content: center;
+  }
 `;
 
 const LogoHeader = styled.h1`
