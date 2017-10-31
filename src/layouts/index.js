@@ -52,9 +52,14 @@ const Main = styled.main`
   margin-top: 100px;
   padding: 2rem;
   min-height: calc(100vh - 164px);
+  display: flex;
+  justify-content: ${props =>
+    props.location.pathname === "/" ? "center;" : "flex-start;"}
+  align-items: ${props =>
+    props.location.pathname === "/" ? "center;" : "flex-start;"}
 `;
 
-const Template = ({ data, children }) => (
+const Template = ({ children, data, location }) => (
   <div>
     <Header>
       <LogoHeader>
@@ -72,13 +77,14 @@ const Template = ({ data, children }) => (
         </Menu>
       </Navigation>
     </Header>
-    <Main>{children()}</Main>
+    <Main location={location}>{children()}</Main>
   </div>
 );
 
 Template.propTypes = {
   children: PropTypes.func,
   data: PropTypes.object,
+  location: PropTypes.object,
   route: PropTypes.object
 };
 
