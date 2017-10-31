@@ -64,7 +64,9 @@ const Template = ({ data, children }) => (
         <Menu>
           {data.allSitePage.edges.map(({ node }) => (
             <MenuItem key={node.path}>
-              <MenuLink to={node.path}>{node.jsonName.slice(0, -5)}</MenuLink>
+              <MenuLink to={node.path} activeStyle={{ color: "#ff6b6b" }}>
+                {node.jsonName.slice(0, -5)}
+              </MenuLink>
             </MenuItem>
           ))}
         </Menu>
