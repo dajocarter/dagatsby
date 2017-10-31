@@ -53,9 +53,12 @@ const MenuLink = StyledLink.extend`
 `;
 
 const Main = styled.main`
-  margin-top: 100px;
+  margin-top: ${props => (props.location.pathname === "/" ? "0;" : "100px;")}
   padding: 2rem;
-  min-height: calc(100vh - 164px);
+  min-height: ${props =>
+    props.location.pathname === "/"
+      ? "calc(100vh - 64px);"
+      : "calc(100vh - 164px);"}
   display: flex;
   justify-content: ${props =>
     props.location.pathname === "/" ? "center;" : "flex-start;"}
