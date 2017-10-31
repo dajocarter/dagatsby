@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import StyledLink from "../components/StyledLink";
 import styled from "styled-components";
 import "./index.scss";
@@ -44,9 +45,9 @@ const Template = ({ location, children }) => (
 );
 
 Template.propTypes = {
-  children: React.PropTypes.func,
-  location: React.PropTypes.object,
-  route: React.PropTypes.object
+  children: PropTypes.func,
+  location: PropTypes.object,
+  route: PropTypes.object
 };
 
 export default Template;

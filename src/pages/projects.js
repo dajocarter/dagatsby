@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import StyledLink from "../components/StyledLink";
 import Helmet from "react-helmet";
 
@@ -20,7 +21,7 @@ const Projects = ({ data }) => (
 );
 
 Projects.propTypes = {
-  route: React.PropTypes.object
+  route: PropTypes.object
 };
 
 export default Projects;
