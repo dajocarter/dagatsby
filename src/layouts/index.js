@@ -79,19 +79,28 @@ const Template = ({ children, data, location }) => (
       </LogoHeader>
       <Navigation>
         <Menu>
-          {data.allSitePage.edges.map(({ node }) => (
-            <MenuItem key={node.path}>
-              <MenuLink
-                to={node.path}
-                activeStyle={{
-                  color: "#ff6b6b",
-                  borderBottom: "2px solid #ff6b6b"
-                }}
-              >
-                {node.jsonName.slice(0, -5).replace(/\-/gi, " ")}
-              </MenuLink>
-            </MenuItem>
-          ))}
+          {data.allSitePage.edges
+            .filter(
+              ({ node }) =>
+                ![
+                  "/404/",
+                  "/dev-404-page/",
+                  "/offline-plugin-app-shell-fallback/"
+                ].includes(node.path)
+            )
+            .map(({ node }) => (
+              <MenuItem key={node.path}>
+                <MenuLink
+                  to={node.path}
+                  activeStyle={{
+                    color: "#ff6b6b",
+                    borderBottom: "2px solid #ff6b6b"
+                  }}
+                >
+                  {node.jsonName.slice(0, -5).replace(/\-/gi, " ")}
+                </MenuLink>
+              </MenuItem>
+            ))}
         </Menu>
       </Navigation>
     </Header>
@@ -110,7 +119,7 @@ export default Template;
 
 export const templateQuery = graphql`
   query menuQuery {
-    allSitePage(filter: { path: { glob: "/*/", ne: "/dev-404-page/" } }) {
+    allSitePage(filter: { path: { glob: "/*/" } }) {
       edges {
         node {
           path
