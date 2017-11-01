@@ -4,3 +4,26 @@ body {
   background: #04052e;
   color: #fff;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #ff6b6b;
+}
+
+a {
+  text-shadow: none;
+  background-image: none;
+  color: #4ecdc4;
+
+  &:hover {
+    color: #ff6b6b;
+  }
+}
+
+blockquote {
+  color: #fff;
+}
