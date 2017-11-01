@@ -14,8 +14,8 @@ const Header = styled.header`
   justify-content: space-between;
   align-items: center;
   background-color: #04052e;
-  @media (max-width: 499px) {
   padding: 1rem;
+  @media (max-width: 589px) {
     justify-content: center;
   }
 `;
@@ -54,17 +54,20 @@ const MenuLink = styled(Link)`
 `;
 
 const Main = styled.main`
-  margin-top: ${props => (props.location.pathname === "/" ? "0;" : "100px;")}
+  margin-top: ${props => (props.location.pathname === "/" ? "0;" : "84px;")}
   padding: 1rem;
   min-height: ${props =>
-    props.location.pathname === "/"
-      ? "calc(100vh - 64px);"
-      : "calc(100vh - 164px);"}
+    props.location.pathname === "/" ? "100vh;" : "calc(100vh - 84px);"}
   display: flex;
   justify-content: ${props =>
     props.location.pathname === "/" ? "center;" : "flex-start;"}
   align-items: ${props =>
     props.location.pathname === "/" ? "center;" : "flex-start;"}
+  @media (max-width: 589px) {
+    margin-top: ${props => (props.location.pathname === "/" ? "0;" : "129px;")}
+    min-height: ${props =>
+      props.location.pathname === "/" ? "100vh;" : "calc(100vh - 129px);"}
+  }
 `;
 
 const Template = ({ children, data, location }) => (
