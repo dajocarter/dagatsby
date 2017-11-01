@@ -45,12 +45,13 @@ const Menu = styled.ul`
 const MenuItem = styled.li`
   flex: 0 0 auto;
   margin: 0;
+  padding: 0 1rem;
 `;
 
 const MenuLink = styled(Link)`
   display: block;
   text-transform: capitalize;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0;
 `;
 
 const Main = styled.main`
@@ -80,7 +81,13 @@ const Template = ({ children, data, location }) => (
         <Menu>
           {data.allSitePage.edges.map(({ node }) => (
             <MenuItem key={node.path}>
-              <MenuLink to={node.path} activeStyle={{ color: "#ff6b6b" }}>
+              <MenuLink
+                to={node.path}
+                activeStyle={{
+                  color: "#ff6b6b",
+                  borderBottom: "2px solid #ff6b6b"
+                }}
+              >
                 {node.jsonName.slice(0, -5)}
               </MenuLink>
             </MenuItem>
