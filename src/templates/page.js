@@ -7,7 +7,6 @@ const Page = ({ data }) => (
       title={`${data.markdownRemark.frontmatter.title} | ${data.site
         .siteMetadata.title}`}
     />
-    <h1>{data.markdownRemark.frontmatter.title}</h1>
     <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
   </div>
 );
