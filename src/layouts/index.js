@@ -88,7 +88,7 @@ const Template = ({ children, data, location }) => (
                   borderBottom: "2px solid #ff6b6b"
                 }}
               >
-                {node.jsonName.slice(0, -5)}
+                {node.jsonName.slice(0, -5).replace(/\-/gi, " ")}
               </MenuLink>
             </MenuItem>
           ))}
