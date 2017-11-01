@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import StyledLink from "../components/StyledLink";
+import Link from "gatsby-link";
 import Helmet from "react-helmet";
 
 const Index = ({ data }) => (
@@ -11,9 +11,9 @@ const Index = ({ data }) => (
       I'm passionate about building responsive websites for small businesses.
     </h3>
     <p>
-      <StyledLink to={`/`}>Download my resume</StyledLink>,{" "}
-      <StyledLink to={`/projects/`}>check out my work</StyledLink>, and{" "}
-      <StyledLink to={`/posts/`}>take a look at some of my posts</StyledLink>.
+      <Link to={`/`}>Download my resume</Link>,{" "}
+      <Link to={`/projects/`}>check out my work</Link>, and{" "}
+      <Link to={`/posts/`}>take a look at some of my posts</Link>.
     </p>
   </div>
 );

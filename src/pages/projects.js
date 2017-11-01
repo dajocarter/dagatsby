@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import StyledLink from "../components/StyledLink";
+import Link from "gatsby-link";
 import Helmet from "react-helmet";
 
 const Projects = ({ data }) => (
@@ -9,9 +9,9 @@ const Projects = ({ data }) => (
     {data.allMarkdownRemark.edges.map(({ node }) => (
       <div key={node.frontmatter.slug}>
         <h3>
-          <StyledLink to={`/posts/${node.frontmatter.slug}`}>
+          <Link to={`/posts/${node.frontmatter.slug}`}>
             {node.frontmatter.title}
-          </StyledLink>
+          </Link>
         </h3>
         <small>{node.frontmatter.date}</small>
         <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />

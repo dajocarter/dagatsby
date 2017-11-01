@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import StyledLink from "../components/StyledLink";
+import Link from "gatsby-link";
 import styled from "styled-components";
 import "./index.scss";
 
@@ -25,7 +25,7 @@ const LogoHeader = styled.h1`
   margin: 0;
 `;
 
-const LogoLink = StyledLink.extend`
+const LogoLink = styled(Link)`
   font-weight: 300;
 `;
 
@@ -44,9 +44,10 @@ const Menu = styled.ul`
 
 const MenuItem = styled.li`
   flex: 0 0 auto;
+  margin: 0;
 `;
 
-const MenuLink = StyledLink.extend`
+const MenuLink = styled(Link)`
   display: block;
   text-transform: capitalize;
   padding: 0.5rem 1rem;
