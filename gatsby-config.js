@@ -58,9 +58,9 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     {
-      resolve: `gatsby-plugin-google-fonts`,
+      resolve: `gatsby-plugin-typography`,
       options: {
-        fonts: ["Lato:300,400,700"]
+        pathToConfigModule: `src/utils/typography.js`
       }
     },
     `gatsby-plugin-sass`,
