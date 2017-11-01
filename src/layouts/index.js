@@ -14,8 +14,8 @@ const Header = styled.header`
   justify-content: space-between;
   align-items: center;
   background-color: #04052e;
-  padding: 2rem;
   @media (max-width: 499px) {
+  padding: 1rem;
     justify-content: center;
   }
 `;
@@ -55,7 +55,7 @@ const MenuLink = styled(Link)`
 
 const Main = styled.main`
   margin-top: ${props => (props.location.pathname === "/" ? "0;" : "100px;")}
-  padding: 2rem;
+  padding: 1rem;
   min-height: ${props =>
     props.location.pathname === "/"
       ? "calc(100vh - 64px);"
