@@ -56,6 +56,10 @@ const MenuLink = styled(Link)`
 
 const Main = styled.main`
   margin-top: ${props => (props.location.pathname === "/" ? "0;" : "84px;")}
+  margin-right: auto;
+  margin-left: auto;
+  max-width: ${props =>
+    props.location.pathname === "/" ? "768px;" : "1024px;"}
   padding: 1rem;
   min-height: ${props =>
     props.location.pathname === "/" ? "100vh;" : "calc(100vh - 84px);"}
