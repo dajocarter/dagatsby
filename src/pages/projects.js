@@ -5,7 +5,7 @@ import Helmet from "react-helmet";
 
 const Projects = ({ data }) => (
   <div>
-    <Helmet title={data.site.siteMetadata.title} />
+    <Helmet title={`Projects | ${data.site.siteMetadata.title}`} />
     {data.allMarkdownRemark.edges.map(({ node }) => (
       <div key={node.frontmatter.slug}>
         <h3>
