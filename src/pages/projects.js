@@ -9,7 +9,7 @@ const Projects = ({ data }) => (
     {data.allMarkdownRemark.edges.map(({ node }) => (
       <div key={node.frontmatter.slug}>
         <h3>
-          <Link to={`/posts/${node.frontmatter.slug}`}>
+          <Link to={`/projects/${node.frontmatter.slug}`}>
             {node.frontmatter.title}
           </Link>
         </h3>
