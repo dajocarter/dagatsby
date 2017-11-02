@@ -1,0 +1,11 @@
+.template-page {
+  h1,
+  h2 {
+    border-bottom: 2px solid #22fbfb; // #ff6b6b;
+    float: left;
+    padding-bottom: 0.5rem;
+    + * {
+      clear: left;
+    }
+  }
+}
