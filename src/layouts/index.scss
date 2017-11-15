@@ -133,11 +133,13 @@ main {
 
   .gatsby-highlight {
     background-color: #141414;
+    border-radius: 0.25rem;
     margin-bottom: 1rem;
     padding: 1rem;
 
     pre {
       border: 0;
+      border-radius: 0;
       box-shadow: none;
       margin: 0;
       padding: 0;
