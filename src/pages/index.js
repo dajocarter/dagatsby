@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Link from "gatsby-link";
 import Helmet from "react-helmet";
+import resume from "./David-J-Carter-Resume.pdf";
 
 const Index = ({ data }) => (
   <div>
@@ -12,7 +13,7 @@ const Index = ({ data }) => (
     </h3>
     <div className="btn-group">
       <button className="btn btn-primary" type="button">
-        <Link to={`/`}>Download my resume</Link>
+        <a href={resume}>Download my resume</a>
       </button>
       <button className="btn btn-primary" type="button">
         <Link to={`/projects/`}>Check out my work</Link>
