@@ -113,3 +113,22 @@ main {
     margin-bottom: 1rem;
   }
 }
+
+.markdown-body {
+  h1,
+  h2 {
+    border-bottom: 1px solid #fff;
+    margin: 2rem 0 1rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .gatsby-highlight {
+    background-color: #1a1c22;
+    margin-bottom: 1rem;
+    padding: 1rem;
+
+    pre {
+      margin: 0;
+    }
+  }
+}

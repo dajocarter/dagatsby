@@ -9,7 +9,10 @@ const Post = ({ data }) => (
     />
     <h1>{data.markdownRemark.frontmatter.title}</h1>
     <p>{data.markdownRemark.frontmatter.date}</p>
-    <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+    <div
+      className="markdown-body"
+      dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
+    />
   </div>
 );
 

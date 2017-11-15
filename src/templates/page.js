@@ -1,6 +1,5 @@
 import React from "react";
 import Helmet from "react-helmet";
-import "./page.scss";
 
 const Page = ({ data }) => (
   <div>
