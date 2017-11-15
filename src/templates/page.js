@@ -2,7 +2,7 @@ import React from "react";
 import Helmet from "react-helmet";
 
 const Page = ({ data }) => (
-  <div>
+  <div className="content">
     <Helmet
       title={`${data.markdownRemark.frontmatter.title} | ${data.site
         .siteMetadata.title}`}

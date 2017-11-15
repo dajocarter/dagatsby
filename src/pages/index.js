@@ -5,7 +5,7 @@ import Helmet from "react-helmet";
 import resume from "./David-J-Carter-Resume.pdf";
 
 const Index = ({ data }) => (
-  <div>
+  <div className="content">
     <Helmet title={data.site.siteMetadata.title} />
     <h1>Hi, I'm David Carter.</h1>
     <h3>

@@ -97,6 +97,11 @@ main {
       min-height: calc(100vh - 135px);
     }
   }
+
+  > .content {
+    flex: 0 0 auto;
+    max-width: 100%;
+  }
 }
 
 .btn-group {

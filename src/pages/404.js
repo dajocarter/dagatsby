@@ -3,7 +3,7 @@ import Helmet from "react-helmet";
 import Link from "gatsby-link";
 
 const FourOhFour = ({ data }) => (
-  <div>
+  <div className="content">
     <Helmet title={`${data.site.siteMetadata.title} | 404`} />
     <h1>404 Error</h1>
     <h2>You look lost.</h2>
