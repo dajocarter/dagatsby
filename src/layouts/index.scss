@@ -132,13 +132,15 @@ main {
   }
 
   .gatsby-highlight {
-    background-color: #1a1c22;
+    background-color: #141414;
     margin-bottom: 1rem;
     padding: 1rem;
 
     pre {
+      border: 0;
+      box-shadow: none;
       margin: 0;
-      overflow-x: auto;
+      padding: 0;
     }
   }
 }
