@@ -1,4 +1,7 @@
 header {
+  background-color: #252830;
+  padding: 1rem;
+  z-index: 10;
   position: fixed;
   top: 0;
   left: 0;
@@ -7,8 +10,6 @@ header {
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
-  background-color: #252830;
-  padding: 1rem;
 
   @media (max-width: 589px) {
     justify-content: center;
