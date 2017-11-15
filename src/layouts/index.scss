@@ -26,3 +26,34 @@ a {
 blockquote {
   color: #cfd2da;
 }
+
+@import "header";
+
+main {
+  display: flex;
+  flex-flow: row wrap;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 1rem;
+
+  &.home {
+    margin-top: 0;
+    max-width: 768px;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &.page {
+    margin-top: 91px;
+    max-width: 1024px;
+    min-height: calc(100vh - 91px);
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    @media (max-width: 589px) {
+      margin-top: 135px;
+      min-height: calc(100vh - 135px);
+    }
+  }
+}

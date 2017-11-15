@@ -4,14 +4,10 @@ import Link from "gatsby-link";
 import Helmet from "react-helmet";
 import styled from "styled-components";
 
-const Headline = styled.h1`
-  color: #fff;
-`;
-
 const Index = ({ data }) => (
   <div>
     <Helmet title={data.site.siteMetadata.title} />
-    <Headline>Hi, I'm David Carter.</Headline>
+    <h1>Hi, I'm David Carter.</h1>
     <h3>
       I'm passionate about building responsive websites for small businesses.
     </h3>
