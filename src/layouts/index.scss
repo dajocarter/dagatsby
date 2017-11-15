@@ -1,6 +1,6 @@
 body {
-  background: #04052e;
-  color: #fff;
+  background: #252830;
+  color: #cfd2da;
 }
 
 h1,
@@ -9,19 +9,20 @@ h3,
 h4,
 h5,
 h6 {
-  color: #ff6b6b;
+  color: #fff;
 }
 
 a {
   text-shadow: none;
   background-image: none;
-  color: #4ecdc4;
+  color: #1997c6;
 
   &:hover {
-    color: #ff6b6b;
+    color: #106382;
+    text-decoration: underline;
   }
 }
 
 blockquote {
-  color: #fff;
+  color: #cfd2da;
 }

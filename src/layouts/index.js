@@ -13,7 +13,7 @@ const Header = styled.header`
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
-  background-color: #04052e;
+  background-color: #252830;
   padding: 1rem;
   @media (max-width: 589px) {
     justify-content: center;
@@ -97,8 +97,9 @@ const Template = ({ children, data, location }) => (
                 <MenuLink
                   to={node.path}
                   activeStyle={{
-                    color: "#ff6b6b",
-                    borderBottom: "2px solid #ff6b6b"
+                    borderBottom: "2px solid #1BC98E",
+                    color: "#1BC98E",
+                    textDecoration: "none"
                   }}
                 >
                   {node.jsonName.slice(0, -5).replace(/\-/gi, " ")}
