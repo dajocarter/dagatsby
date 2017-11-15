@@ -10,11 +10,17 @@ const Index = ({ data }) => (
     <h3>
       I'm passionate about building responsive websites for small businesses.
     </h3>
-    <p>
-      <Link to={`/`}>Download my resume</Link>,{" "}
-      <Link to={`/projects/`}>check out my work</Link>, and{" "}
-      <Link to={`/posts/`}>take a look at some of my posts</Link>.
-    </p>
+    <div className="btn-group">
+      <button className="btn btn-primary" type="button">
+        <Link to={`/`}>Download my resume</Link>
+      </button>
+      <button className="btn btn-primary" type="button">
+        <Link to={`/projects/`}>Check out my work</Link>
+      </button>
+      <button className="btn btn-primary" type="button">
+        <Link to={`/posts/`}>Take a look at some of my posts</Link>
+      </button>
+    </div>
   </div>
 );
 

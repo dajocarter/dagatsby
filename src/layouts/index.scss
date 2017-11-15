@@ -23,6 +23,49 @@ a {
   }
 }
 
+button,
+[type="button"] {
+  -webkit-appearance: button;
+  text-transform: none;
+  letter-spacing: normal;
+  display: inline-block;
+  font-weight: normal;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 2px solid transparent;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.9rem;
+  line-height: 1.25;
+  border-radius: 0.25rem;
+  transition: all 0.15s ease-in-out;
+
+  &.btn-primary {
+    color: #fff;
+    background-color: transparent;
+    border-color: #1997c6;
+
+    &:hover {
+      background-color: #157da4;
+      border-color: #137499;
+    }
+
+    a {
+      color: #fff;
+    }
+  }
+
+  &:focus,
+  &:hover {
+    text-decoration: none;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
 blockquote {
   color: #cfd2da;
 }
@@ -53,5 +96,20 @@ main {
       margin-top: 135px;
       min-height: calc(100vh - 135px);
     }
+  }
+}
+
+.btn-group {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    justify-content: space-around;
+  }
+
+  .btn {
+    margin-bottom: 1rem;
   }
 }
