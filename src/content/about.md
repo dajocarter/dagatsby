@@ -2,9 +2,7 @@
 title: "About"
 slug: "about"
 ---
-# About Me
-
-## Hi, I'm David Carter
+# Hi, I'm David Carter
 
 I am the Director of Technical Services at [Tribeswell](//tribeswell.com) in Bloomington, Indiana. My favorite part of going to work is developing complex websites and solving all of the creative problems that arise in the process. I also handle ongoing maintenance like plugin updates and adding new features to sites, among other responsibilities. At home, I keep up with the latest trends by trying out all of the different JS frameworks and static site generators, continually learning from online courses such as those from [Wes Bos](//wesbos.com/courses/) and [Egghead](//egghead.io), and reading the latest articles on [/r/webdev](//reddit.com/r/webdev) and twitter for example.
 
