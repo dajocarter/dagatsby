@@ -149,4 +149,14 @@ main {
       min-width: 100%;
     }
   }
+
+  .gatsby-highlight-code-line {
+    background-color: #141414;
+    display: block;
+    margin-right: -1rem;
+    margin-left: -1rem;
+    padding-right: 1rem;
+    padding-left: 0.75rem;
+    border-left: 0.25rem solid #e9c163;
+  }
 }
