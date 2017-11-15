@@ -42,7 +42,7 @@ December 2014 - Present
 May 2014 - August 2014
 
 ### Mathematics Tutor
-**[Campus Tutoring Services](//www.cts.com)**
+**[Campus Tutoring Services](//campusts.com)**
 <br />
 *Bloomington, IN*
 <br />
