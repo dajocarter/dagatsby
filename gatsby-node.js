@@ -17,6 +17,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
               node {
                 frontmatter {
                   slug
+                  draft
                 }
               }
             }
@@ -28,6 +29,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
               node {
                 frontmatter {
                   slug
+                  draft
                 }
               }
             }
@@ -39,6 +41,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
               node {
                 frontmatter {
                   slug
+                  draft
                 }
               }
             }
@@ -51,33 +54,39 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
         }
 
         result.data.pages.edges.forEach(({ node }) => {
-          createPage({
-            path: `/${node.frontmatter.slug}/`,
-            component: pageTemplate,
-            context: {
-              slug: node.frontmatter.slug
-            }
-          });
+          if (!node.frontmatter.draft) {
+            createPage({
+              path: `/${node.frontmatter.slug}/`,
+              component: pageTemplate,
+              context: {
+                slug: node.frontmatter.slug
+              }
+            });
+          }
         });
 
         result.data.posts.edges.forEach(({ node }) => {
-          createPage({
-            path: `/posts/${node.frontmatter.slug}/`,
-            component: postTemplate,
-            context: {
-              slug: node.frontmatter.slug
-            }
-          });
+          if (!node.frontmatter.draft) {
+            createPage({
+              path: `/posts/${node.frontmatter.slug}/`,
+              component: postTemplate,
+              context: {
+                slug: node.frontmatter.slug
+              }
+            });
+          }
         });
 
         result.data.projects.edges.forEach(({ node }) => {
-          createPage({
-            path: `/projects/${node.frontmatter.slug}/`,
-            component: projectTemplate,
-            context: {
-              slug: node.frontmatter.slug
-            }
-          });
+          if (!node.frontmatter.draft) {
+            createPage({
+              path: `/projects/${node.frontmatter.slug}/`,
+              component: projectTemplate,
+              context: {
+                slug: node.frontmatter.slug
+              }
+            });
+          }
         });
       })
     );
