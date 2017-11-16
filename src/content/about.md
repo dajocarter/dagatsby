@@ -1,6 +1,7 @@
 ---
 title: "About"
 slug: "about"
+draft: false
 ---
 # Hi, I'm David Carter
 
