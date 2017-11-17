@@ -9,7 +9,8 @@ const Index = ({ data }) => (
     <Helmet title={data.site.siteMetadata.title} />
     <h1>Hi, I'm David Carter.</h1>
     <h3>
-      I'm passionate about building responsive websites for small businesses.
+      I am a web developer, passionate about learning and motivated by solving
+      problems efficiently.
     </h3>
     <div className="btn-group">
       <a className="btn btn-primary" href={resume}>
