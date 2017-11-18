@@ -15,7 +15,7 @@ const Project = ({ data }) => (
 
 export default Project;
 
-export const pageQuery = graphql`
+export const projectQuery = graphql`
   query ProjectBySlug($slug: String!) {
     site {
       siteMetadata {

@@ -18,7 +18,7 @@ const Post = ({ data }) => (
 
 export default Post;
 
-export const pageQuery = graphql`
+export const postQuery = graphql`
   query BlogPostBySlug($slug: String!) {
     site {
       siteMetadata {
