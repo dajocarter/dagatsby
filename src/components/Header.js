@@ -1,16 +1,74 @@
 import React from "react";
 import Link from "gatsby-link";
-import "./Header.scss";
+import styled from "styled-components";
+
+const HeaderContainer = styled.header`
+  background-color: #252830;
+  padding: 1rem;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: 589px) {
+    justify-content: center;
+  }
+`;
+
+const Logo = styled.h1`
+  flex: 0 0 auto;
+  margin: 0;
+`;
+
+const LogoLink = styled(Link)`
+  font-weight: 300;
+`;
+
+const Nav = styled.nav`
+  flex: 0 0 auto;
+`;
+
+const Menu = styled.ul`
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+const MenuItem = styled.li`
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 0 1rem;
+`;
+
+const MenuItemLink = styled(Link)`
+  border-bottom: 2px solid transparent;
+  display: block;
+  text-transform: capitalize;
+  padding: 0.5rem 0;
+  transition: border-color 0.25s ease, color 0.25s ease;
+
+  &.active {
+    border-color: #e71d36;
+    color: #e71d36;
+    text-decoration: none;
+  }
+`;
 
 const Header = props => (
-  <header>
-    <h1>
-      <Link to={`/`} className={`logo-link`}>
-        David Carter
-      </Link>
-    </h1>
-    <nav>
-      <ul>
+  <HeaderContainer>
+    <Logo>
+      <LogoLink to={`/`}>David Carter</LogoLink>
+    </Logo>
+    <Nav>
+      <Menu>
         {props.menuItems
           .filter(
             ({ node }) =>
@@ -21,15 +79,15 @@ const Header = props => (
               ].includes(node.path)
           )
           .map(({ node }) => (
-            <li key={node.path}>
-              <Link to={node.path} activeClassName={`active`}>
+            <MenuItem key={node.path}>
+              <MenuItemLink to={node.path} activeClassName={`active`}>
                 {node.jsonName.slice(0, -5).replace(/\-/gi, " ")}
-              </Link>
-            </li>
+              </MenuItemLink>
+            </MenuItem>
           ))}
-      </ul>
-    </nav>
-  </header>
+      </Menu>
+    </Nav>
+  </HeaderContainer>
 );
 
 export default Header;
