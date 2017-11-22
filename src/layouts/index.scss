@@ -71,7 +71,7 @@ main {
 
   &.page {
     margin-top: 91px;
-    max-width: 1024px;
+    max-width: 768px;
     min-height: calc(100vh - 91px);
     justify-content: flex-start;
     align-items: flex-start;
@@ -83,8 +83,7 @@ main {
   }
 
   > .content {
-    flex: 0 0 auto;
-    max-width: 100%;
+    flex: 0 0 100%;
   }
 }
 
