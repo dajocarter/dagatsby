@@ -1,8 +1,9 @@
 import React from "react";
 import Helmet from "react-helmet";
+import Content from "../components/styled/Content";
 
 const Page = ({ data }) => (
-  <div className="content">
+  <Content>
     <Helmet
       title={`${data.markdownRemark.frontmatter.title} | ${data.site
         .siteMetadata.title}`}
@@ -11,7 +12,7 @@ const Page = ({ data }) => (
       className="markdown-body template-page"
       dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
     />
-  </div>
+  </Content>
 );
 
 export default Page;

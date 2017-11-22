@@ -2,10 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import Link from "gatsby-link";
 import Helmet from "react-helmet";
+import Content from "../components/styled/Content";
 import resume from "./David-J-Carter-Resume.pdf";
 
 const Index = ({ data }) => (
-  <div className="content">
+  <Content>
     <Helmet title={data.site.siteMetadata.title} />
     <h1>Hi, I'm David Carter.</h1>
     <h3>
@@ -23,7 +24,7 @@ const Index = ({ data }) => (
         Take a look at some of my posts
       </Link>
     </div>
-  </div>
+  </Content>
 );
 
 Index.propTypes = {

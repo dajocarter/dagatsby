@@ -2,9 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import Link from "gatsby-link";
 import Helmet from "react-helmet";
+import Content from "../components/styled/Content";
 
 const Posts = ({ data }) => (
-  <div className="content">
+  <Content>
     <Helmet title={`Posts | ${data.site.siteMetadata.title}`} />
     {data.allMarkdownRemark.edges.map(({ node }) => (
       <div key={node.frontmatter.slug}>
@@ -17,7 +18,7 @@ const Posts = ({ data }) => (
         <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
       </div>
     ))}
-  </div>
+  </Content>
 );
 
 Posts.propTypes = {

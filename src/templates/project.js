@@ -1,8 +1,9 @@
 import React from "react";
 import Helmet from "react-helmet";
+import Content from "../components/styled/Content";
 
 const Project = ({ data }) => (
-  <div className="content">
+  <Content>
     <Helmet
       title={`${data.markdownRemark.frontmatter.title} | ${data.site
         .siteMetadata.title}`}
@@ -10,7 +11,7 @@ const Project = ({ data }) => (
     <h1>{data.markdownRemark.frontmatter.title}</h1>
     <p>{data.markdownRemark.frontmatter.date}</p>
     <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
-  </div>
+  </Content>
 );
 
 export default Project;

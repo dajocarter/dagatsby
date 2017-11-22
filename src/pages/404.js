@@ -1,9 +1,10 @@
 import React from "react";
 import Helmet from "react-helmet";
 import Link from "gatsby-link";
+import Content from "../components/styled/Content";
 
 const FourOhFour = ({ data }) => (
-  <div className="content">
+  <Content>
     <Helmet title={`${data.site.siteMetadata.title} | 404`} />
     <h1>404 Error</h1>
     <h2>You look lost.</h2>
@@ -16,7 +17,7 @@ const FourOhFour = ({ data }) => (
         </li>
       ))}
     </ul>
-  </div>
+  </Content>
 );
 
 export default FourOhFour;
