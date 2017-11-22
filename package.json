@@ -27,6 +27,7 @@
     "gatsby-transformer-remark": "^1.7.19",
     "gatsby-transformer-sharp": "^1.6.1",
     "normalize-scss": "^7.0.0",
+    "styled-components": "^2.2.3",
     "typography-theme-fairy-gates": "^0.15.11"
   },
   "devDependencies": {
