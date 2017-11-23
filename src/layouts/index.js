@@ -8,6 +8,10 @@ require("prismjs/themes/prism-twilight.css");
 const Body = styled.div`
   background: #252830;
   color: #cfd2da;
+
+  blockquote {
+    color: #cfd2da;
+  }
 `;
 
 const Main = styled.main`

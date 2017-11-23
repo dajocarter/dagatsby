@@ -2,21 +2,27 @@ import React from "react";
 import PropTypes from "prop-types";
 import Link from "gatsby-link";
 import Helmet from "react-helmet";
+import styled from "styled-components";
 import Content from "../components/styled/Content";
+
+const Post = styled.div``;
+const Title = styled.h3``;
+const MetaData = styled.small``;
+const Excerpt = styled.p``;
 
 const Posts = ({ data }) => (
   <Content>
     <Helmet title={`Posts | ${data.site.siteMetadata.title}`} />
     {data.allMarkdownRemark.edges.map(({ node }) => (
-      <div key={node.frontmatter.slug}>
-        <h3>
+      <Post key={node.frontmatter.slug}>
+        <Title>
           <Link to={`/posts/${node.frontmatter.slug}`}>
             {node.frontmatter.title}
           </Link>
-        </h3>
-        <small>{node.frontmatter.date}</small>
-        <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-      </div>
+        </Title>
+        <MetaData>{node.frontmatter.date}</MetaData>
+        <Excerpt dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+      </Post>
     ))}
   </Content>
 );
