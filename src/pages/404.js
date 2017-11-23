@@ -1,6 +1,6 @@
 import React from "react";
 import Helmet from "react-helmet";
-import Link from "gatsby-link";
+import Anchor from "../components/styled/Anchor";
 import Content from "../components/styled/Content";
 
 const FourOhFour = ({ data }) => (
@@ -13,7 +13,7 @@ const FourOhFour = ({ data }) => (
     <ul>
       {data.allSitePage.edges.map(({ node }) => (
         <li key={node.path}>
-          <Link to={node.path}>{node.path}</Link>
+          <Anchor to={node.path}>{node.path}</Anchor>
         </li>
       ))}
     </ul>

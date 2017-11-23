@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Link from "gatsby-link";
+import Anchor from "../components/styled/Anchor";
 import Helmet from "react-helmet";
 import styled from "styled-components";
 import Content from "../components/styled/Content";
@@ -16,9 +16,9 @@ const Posts = ({ data }) => (
     {data.allMarkdownRemark.edges.map(({ node }) => (
       <Post key={node.frontmatter.slug}>
         <Title>
-          <Link to={`/posts/${node.frontmatter.slug}`}>
+          <Anchor to={`/posts/${node.frontmatter.slug}`}>
             {node.frontmatter.title}
-          </Link>
+          </Anchor>
         </Title>
         <MetaData>{node.frontmatter.date}</MetaData>
         <Excerpt dangerouslySetInnerHTML={{ __html: node.excerpt }} />

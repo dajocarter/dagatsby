@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "gatsby-link";
+import Anchor from "../components/styled/Anchor";
 import styled from "styled-components";
 
 const HeaderContainer = styled.header`
@@ -25,7 +25,7 @@ const Logo = styled.h1`
   margin: 0;
 `;
 
-const LogoLink = styled(Link)`
+const LogoLink = styled(Anchor)`
   font-weight: 300;
 `;
 
@@ -48,7 +48,7 @@ const MenuItem = styled.li`
   padding: 0 1rem;
 `;
 
-const MenuItemLink = styled(Link)`
+const MenuItemLink = styled(Anchor)`
   border-bottom: 2px solid transparent;
   display: block;
   text-transform: capitalize;

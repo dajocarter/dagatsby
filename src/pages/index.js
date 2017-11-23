@@ -1,8 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Link from "gatsby-link";
+import Link, { navigateTo } from "gatsby-link";
 import Helmet from "react-helmet";
 import Content from "../components/styled/Content";
+import Anchor from "../components/styled/Anchor";
 import styled from "styled-components";
 import resume from "./David-J-Carter-Resume.pdf";
 
@@ -28,15 +29,15 @@ const Index = ({ data }) => (
       problems efficiently.
     </Blurb>
     <BtnGroup>
-      <a className="btn btn-primary" href={resume}>
+      <Anchor className="btn btn-primary" href={resume}>
         Download my resume
-      </a>
-      <Link className="btn btn-primary" to={`/projects/`}>
+      </Anchor>
+      <Anchor className="btn btn-primary" to={`/projects/`}>
         Check out my work
-      </Link>
-      <Link className="btn btn-primary" to={`/posts/`}>
+      </Anchor>
+      <Anchor className="btn btn-primary" to={`/posts/`}>
         Take a look at some of my posts
-      </Link>
+      </Anchor>
     </BtnGroup>
   </Content>
 );

@@ -1,4 +1,9 @@
-a {
+import React from "react";
+import Link from "gatsby-link";
+import styled from "styled-components";
+import PropTypes from "prop-types";
+
+const RegularLink = styled.a`
   text-shadow: none;
   background-image: none;
   color: #1997c6;
@@ -31,4 +36,21 @@ a {
       text-decoration: none;
     }
   }
-}
+`;
+
+const GatsbyLink = RegularLink.withComponent(Link);
+
+const Anchor = ({ href, to, ...others }) => {
+  return href ? (
+    <RegularLink href={href} {...others} />
+  ) : (
+    <GatsbyLink to={to} {...others} />
+  );
+};
+
+export default Anchor;
+
+Anchor.propTypes = {
+  href: PropTypes.string,
+  to: PropTypes.string
+};
