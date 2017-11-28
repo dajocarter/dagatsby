@@ -38,23 +38,23 @@ const Tags = styled.div`
 const Tag = styled.button`
   background-color: #1997c6;
   background-image: none;
+  color: #fff;
   border: 2px solid transparent;
   border-color: #1997c6;
   border-radius: 2px;
-  color: #fff;
-  flex: 0 0 auto;
-  padding: 0.25rem 0.5rem;
-  margin: 1rem 1rem 1rem 0;
-  text-shadow: none;
-  letter-spacing: 0.5px;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  cursor: pointer;
-  text-decoration: none;
-  outline: none;
-  transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
-  text-align: center;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
     0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  flex: 0 0 auto;
+  padding: 0.125rem 0.25rem;
+  margin: 1rem 1rem 1rem 0;
+  outline: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  text-shadow: none;
+  text-decoration: none;
+  text-align: center;
+  transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
 
   &:hover {
     background-color: #106382;
