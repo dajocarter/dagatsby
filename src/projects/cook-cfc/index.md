@@ -2,7 +2,7 @@
 
 title: "Cook Medical & CFC Properties"
 slug: "cook-cfc"
-date: "2017-10-03T22:48:34-04:00"
+date: "2017-01-26T12:57:09-04:00"
 description: ""
 draft: false
 
