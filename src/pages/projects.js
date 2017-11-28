@@ -1,30 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Anchor from "../components/styled/Anchor";
-import Helmet from "react-helmet";
-import styled from "styled-components";
-import Content from "../components/styled/Content";
-
-const Project = styled.div``;
-const Title = styled.h3``;
-const MetaData = styled.small``;
-const Excerpt = styled.p``;
+import Archive from "../templates/archive";
 
 const Projects = ({ data }) => (
-  <Content>
-    <Helmet title={`Projects | ${data.site.siteMetadata.title}`} />
-    {data.allMarkdownRemark.edges.map(({ node }) => (
-      <Project key={node.frontmatter.slug}>
-        <Title>
-          <Anchor to={`/projects/${node.frontmatter.slug}`}>
-            {node.frontmatter.title}
-          </Anchor>
-        </Title>
-        <MetaData>{node.frontmatter.date}</MetaData>
-        <Excerpt dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-      </Project>
-    ))}
-  </Content>
+  <Archive
+    list={data.allMarkdownRemark.edges}
+    title={`Projects | ${data.site.siteMetadata.title}`}
+    prefix={`projects`}
+  />
 );
 
 Projects.propTypes = {
@@ -33,7 +16,7 @@ Projects.propTypes = {
 
 export default Projects;
 
-export const pageQuery = graphql`
+export const projectsQuery = graphql`
   query ProjectsQuery {
     site {
       siteMetadata {
