@@ -25,7 +25,7 @@
     "gatsby-source-filesystem": "^1.5.6",
     "gatsby-transformer-remark": "^1.7.19",
     "gatsby-transformer-sharp": "^1.6.1",
-    "styled-components": "^2.2.3",
+    "styled-components": "2.2.0",
     "typography-theme-fairy-gates": "^0.15.11"
   },
   "devDependencies": {
