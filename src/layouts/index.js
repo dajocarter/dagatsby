@@ -24,9 +24,17 @@ const Main = styled.main`
   max-width: 768px;
   min-height: ${props => (props.home ? `100vh` : `calc(100vh - 91px)`)};
   padding: 1rem;
-  @media (max-width: 589px) {
+  @media (max-width: 558px) {
     margin-top: ${props => (props.home ? `0px` : `135px`)};
     min-height: ${props => (props.home ? `100vh` : `calc(100vh - 135px)`)};
+  }
+  @media (max-width: 480px) {
+    margin-top: ${props => (props.home ? `0px` : `77px`)};
+    min-height: ${props => (props.home ? `100vh` : `calc(100vh - 77px)`)};
+  }
+  @media (max-width: 476px) {
+    margin-top: ${props => (props.home ? `0px` : `114px`)};
+    min-height: ${props => (props.home ? `100vh` : `calc(100vh - 114px)`)};
   }
 `;
 

@@ -15,7 +15,7 @@ const HeaderContainer = styled.header`
   justify-content: space-between;
   align-items: center;
 
-  @media (max-width: 589px) {
+  @media (max-width: 558px) {
     justify-content: center;
   }
 `;
