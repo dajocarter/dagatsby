@@ -33,6 +33,7 @@ export const projectsQuery = graphql`
           frontmatter {
             slug
             date(formatString: "MMMM D, YYYY")
+            draft
           }
           frontmatter {
             title
