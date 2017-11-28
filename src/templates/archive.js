@@ -28,6 +28,44 @@ const Excerpt = styled.p`
   margin-bottom: 0;
 `;
 
+const Tags = styled.div`
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: -1rem;
+`;
+const Tag = styled.button`
+  background-color: #1997c6;
+  background-image: none;
+  border: 2px solid transparent;
+  border-color: #1997c6;
+  border-radius: 2px;
+  color: #fff;
+  flex: 0 0 auto;
+  padding: 0.25rem 0.5rem;
+  margin: 1rem 1rem 1rem 0;
+  text-shadow: none;
+  letter-spacing: 0.5px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+  transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+  text-align: center;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12),
+    0 3px 1px -2px rgba(0, 0, 0, 0.2);
+
+  &:hover {
+    background-color: #106382;
+    border-color: #106382;
+  }
+`;
+
+const TagList = props => (
+  <Tags>{props.tags.map((tag, index) => <Tag key={index}>{tag}</Tag>)}</Tags>
+);
+
 const Archive = props => (
   <Content>
     <Helmet title={`${props.title}`} />
@@ -42,6 +80,9 @@ const Archive = props => (
           </Title>
           <MetaData>{node.frontmatter.date}</MetaData>
           <Excerpt dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+          {node.frontmatter.tags ? (
+            <TagList tags={node.frontmatter.tags} />
+          ) : null}
         </ListItem>
       ))}
   </Content>

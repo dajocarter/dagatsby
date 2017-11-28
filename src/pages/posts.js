@@ -34,9 +34,8 @@ export const postsQuery = graphql`
             slug
             date(formatString: "MMMM D, YYYY")
             draft
-          }
-          frontmatter {
             title
+            tags
           }
         }
       }
