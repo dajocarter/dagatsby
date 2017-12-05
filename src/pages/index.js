@@ -5,7 +5,8 @@ import Helmet from "react-helmet";
 import Content from "../components/styled/Content";
 import Anchor from "../components/styled/Anchor";
 import styled from "styled-components";
-import resume from "./David-J-Carter-Resume.pdf";
+import resume from "../../static/David-Carter-Resume.pdf";
+import cvitae from "../../static/David-Carter-Curriculum-Vitae.pdf";
 
 const Headline = styled.h1`
   margin-top: 0;
@@ -30,13 +31,16 @@ const Index = ({ data }) => (
     </Blurb>
     <BtnGroup>
       <Anchor className="btn btn-primary" href={resume}>
-        Download my resume
+        Relevant Resume
+      </Anchor>
+      <Anchor className="btn btn-primary" href={cvitae}>
+        Complete Resume
       </Anchor>
       <Anchor className="btn btn-primary" to={`/projects/`}>
-        Check out my work
+        View Work
       </Anchor>
       <Anchor className="btn btn-primary" to={`/posts/`}>
-        Take a look at some of my posts
+        Read Posts
       </Anchor>
     </BtnGroup>
   </Content>
