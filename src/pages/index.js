@@ -31,10 +31,10 @@ const Index = ({ data }) => (
     </Blurb>
     <BtnGroup>
       <Anchor className="btn btn-primary" href={resume}>
-        Relevant Resume
+        Relevant Résumé
       </Anchor>
       <Anchor className="btn btn-primary" href={cvitae}>
-        Complete Resume
+        Complete Résumé
       </Anchor>
       <Anchor className="btn btn-primary" to={`/projects/`}>
         View Work
