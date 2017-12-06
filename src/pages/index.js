@@ -20,6 +20,23 @@ const Headline = styled.h1`
 
 const Blurb = styled.h3``;
 
+const Divider = styled.div`
+  position: relative;
+  background-color: #cfd2da;
+  height: 2px;
+  width: 90%;
+  margin: 2rem auto;
+`;
+
+const DividerText = styled.span`
+  background-color: #252830;
+  padding: 0.25rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+`;
+
 const BtnGroup = styled.div`
   display: flex;
   flex-flow: row wrap;
@@ -88,7 +105,9 @@ const Index = ({ data }) => (
       I am a web developer, passionate about learning and motivated by solving
       problems efficiently.
     </Blurb>
-    <hr />
+    <Divider>
+      <DividerText>Follow Me</DividerText>
+    </Divider>
     <BtnGroup>
       <IconLink backgroundColor={`#000`} color={`#fff`}>
         <Anchor target="_blank" href={`https://github.com/dajocarter`}>
@@ -119,7 +138,9 @@ const Index = ({ data }) => (
         </Anchor>
       </IconLink>
     </BtnGroup>
-    <hr />
+    <Divider>
+      <DividerText>Download Résumés</DividerText>
+    </Divider>
     <BtnGroup>
       <Anchor className="btn btn-primary btn-icon" href={resume}>
         <PDFicon /> Relevant Résumé
