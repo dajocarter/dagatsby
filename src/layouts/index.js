@@ -40,7 +40,10 @@ const Main = styled.main`
 
 const Template = ({ children, data, location }) => (
   <Body>
-    <Header menuItems={data.allSitePage.edges} />
+    <Header
+      home={location.pathname === "/" ? true : false}
+      menuItems={data.allSitePage.edges}
+    />
     <Main home={location.pathname === "/" ? true : false}>{children()}</Main>
   </Body>
 );
