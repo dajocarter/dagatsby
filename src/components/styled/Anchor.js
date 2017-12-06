@@ -44,6 +44,14 @@ const RegularLink = styled.a`
       }
     }
 
+    &.btn-icon {
+      display: flex;
+      align-items: center;
+      svg {
+        margin-right: 0.3635rem;
+      }
+    }
+
     &:focus,
     &:hover {
       text-decoration: none;

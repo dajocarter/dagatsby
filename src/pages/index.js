@@ -4,9 +4,15 @@ import Link, { navigateTo } from "gatsby-link";
 import Helmet from "react-helmet";
 import Content from "../components/styled/Content";
 import Anchor from "../components/styled/Anchor";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import resume from "../../static/David-Carter-Resume.pdf";
 import cvitae from "../../static/David-Carter-Curriculum-Vitae.pdf";
+import InstaIcon from "react-icons/lib/fa/instagram";
+import TwitterIcon from "react-icons/lib/fa/twitter";
+import LinkedinIcon from "react-icons/lib/fa/linkedin";
+import MailIcon from "react-icons/lib/fa/envelope";
+import GithubIcon from "react-icons/lib/fa/github-alt";
+import PDFicon from "react-icons/lib/fa/file-pdf-o";
 
 const Headline = styled.h1`
   margin-top: 0;
@@ -21,6 +27,59 @@ const BtnGroup = styled.div`
   align-items: center;
 `;
 
+const bounce = keyframes`
+  from, 20%, 53%, 80%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transform: translate3d(0,0,0);
+  }
+
+  40%, 43% {
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transform: translate3d(0, -30px, 0);
+  }
+
+  70% {
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transform: translate3d(0, -15px, 0);
+  }
+
+  90% {
+    transform: translate3d(0, -4px, 0);
+  }
+`;
+
+const IconLink = styled.span`
+  background-color: ${props => props.backgroundColor};
+  width: 2rem;
+  height: 2rem;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+
+  &:hover,
+  &:active {
+    animation-name: ${bounce};
+    transform-origin: center bottom;
+  }
+
+  &,
+  a {
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  a {
+    color: ${props => props.color};
+    height: 100%;
+    width: 100%;
+
+    &:hover {
+      color: ${props => props.color};
+    }
+  }
+`;
+
 const Index = ({ data }) => (
   <Content>
     <Helmet title={data.site.siteMetadata.title} />
@@ -29,18 +88,44 @@ const Index = ({ data }) => (
       I am a web developer, passionate about learning and motivated by solving
       problems efficiently.
     </Blurb>
+    <hr />
     <BtnGroup>
-      <Anchor className="btn btn-primary" href={resume}>
-        Relevant Résumé
+      <IconLink backgroundColor={`#000`} color={`#fff`}>
+        <Anchor target="_blank" href={`https://github.com/dajocarter`}>
+          <GithubIcon />
+        </Anchor>
+      </IconLink>
+      <IconLink backgroundColor={`#f00`} color={`#fff`}>
+        <Anchor target="_blank" href={`mailto:dajocarter@gmail.com`}>
+          <MailIcon />
+        </Anchor>
+      </IconLink>
+      <IconLink backgroundColor={`#0077b5`} color={`#fff`}>
+        <Anchor
+          target="_blank"
+          href={`https://www.linkedin.com/in/dajocarter/`}
+        >
+          <LinkedinIcon />
+        </Anchor>
+      </IconLink>
+      <IconLink backgroundColor={`#1da1f2`} color={`#fff`}>
+        <Anchor target="_blank" href={`https://twitter.com/dajocarter`}>
+          <TwitterIcon />
+        </Anchor>
+      </IconLink>
+      <IconLink backgroundColor={`#fff`} color={`#000`}>
+        <Anchor target="_blank" href={`https://www.instagram.com/dajocarter/`}>
+          <InstaIcon />
+        </Anchor>
+      </IconLink>
+    </BtnGroup>
+    <hr />
+    <BtnGroup>
+      <Anchor className="btn btn-primary btn-icon" href={resume}>
+        <PDFicon /> Relevant Résumé
       </Anchor>
-      <Anchor className="btn btn-primary" href={cvitae}>
-        Complete Résumé
-      </Anchor>
-      <Anchor className="btn btn-primary" to={`/projects/`}>
-        View Work
-      </Anchor>
-      <Anchor className="btn btn-primary" to={`/posts/`}>
-        Read Posts
+      <Anchor className="btn btn-primary btn-icon" href={cvitae}>
+        <PDFicon /> Complete Résumé
       </Anchor>
     </BtnGroup>
   </Content>
