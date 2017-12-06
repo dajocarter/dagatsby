@@ -36,6 +36,7 @@ export const projectsQuery = graphql`
             draft
             title
             tags
+            links
           }
         }
       }

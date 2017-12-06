@@ -4,6 +4,8 @@ slug: "my-brain-on-anatomy"
 date: "2014-12-28T12:48:34-04:00"
 description: "My Brain on Anatomy contains interactive flipped classes for embryology and histology developed by Barbie Klein."
 draft: false
+links:
+  - "https://www.mybrainonanatomy.com"
 ---
 
 My Brain On Anatomy is an interactive website I've built for my partner's

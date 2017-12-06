@@ -4,6 +4,8 @@ import Anchor from "../components/styled/Anchor";
 import Helmet from "react-helmet";
 import styled from "styled-components";
 import Content from "../components/styled/Content";
+import ClockIcon from "react-icons/lib/fa/clock-o";
+import LinkIcon from "react-icons/lib/fa/external-link";
 
 const ListItem = styled.div`
   border: 2px solid #345;
@@ -16,14 +18,25 @@ const ListItem = styled.div`
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   }
 `;
+
 const Title = styled.h3`
   margin-top: 0;
 `;
-const MetaData = styled.small`
+
+const MetaData = styled.div`
   font-style: italic;
-  display: block;
-  margin-bottom: 0.3625rem;
+
+  svg {
+    margin-right: 0.5rem;
+  }
 `;
+
+const Date = styled.p`
+  margin-bottom: 0.3625rem;
+  display: flex;
+  align-items: center;
+`;
+
 const Excerpt = styled.p`
   margin-bottom: 0;
 `;
@@ -33,8 +46,8 @@ const Tags = styled.div`
   flex-flow: row wrap;
   justify-content: flex-start;
   align-items: center;
-  margin-bottom: -1rem;
 `;
+
 const Tag = styled.button`
   background-color: #1997c6;
   background-image: none;
@@ -46,7 +59,7 @@ const Tag = styled.button`
     0 3px 1px -2px rgba(0, 0, 0, 0.2);
   flex: 0 0 auto;
   padding: 0.125rem 0.25rem;
-  margin: 1rem 1rem 1rem 0;
+  margin: 1rem 1rem 0 0;
   outline: none;
   cursor: pointer;
   font-size: 0.85rem;
@@ -66,6 +79,23 @@ const TagList = props => (
   <Tags>{props.tags.map((tag, index) => <Tag key={index}>{tag}</Tag>)}</Tags>
 );
 
+const ExtLink = Date.extend`
+  a {
+    word-break: break-word;
+  }
+`;
+
+const LinkList = props => (
+  <div>
+    {props.links.map((link, index) => (
+      <ExtLink key={index}>
+        <LinkIcon />
+        <Anchor href={link}>{link}</Anchor>
+      </ExtLink>
+    ))}
+  </div>
+);
+
 const Archive = props => (
   <Content>
     <Helmet title={`${props.title}`} />
@@ -78,7 +108,19 @@ const Archive = props => (
               {node.frontmatter.title}
             </Anchor>
           </Title>
-          <MetaData>{node.frontmatter.date}</MetaData>
+          <MetaData>
+            <Date>
+              <ClockIcon />
+              {node.frontmatter.date}
+            </Date>
+            {node.frontmatter.links ? (
+              <LinkList links={node.frontmatter.links} />
+            ) : (
+              <ExtLink>
+                <LinkIcon /> Not Available
+              </ExtLink>
+            )}
+          </MetaData>
           <Excerpt dangerouslySetInnerHTML={{ __html: node.excerpt }} />
           {node.frontmatter.tags ? (
             <TagList tags={node.frontmatter.tags} />
