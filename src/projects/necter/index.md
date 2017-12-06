@@ -20,7 +20,7 @@ friends to create groups and swipe through other groups in the area to form
 connections. Unfortunately, funding was lost for the project and it is no longer
 maintained. This was my first project after joining Tribeswell.
 
-## Technical Specifications and Description
+## Technical Specifications
 
 I used the Ionic Framework to build this hybrid app which utilized Angular v1.x.
 I then integrated the app with Firebase v0.9 for the database. I also used
@@ -28,6 +28,8 @@ Facebook for login authorization so that groups can only be formed with mutual
 friends. Pushwoosh was used a push notification source.
 
 ![Screenshot of Necter App](./necterPortfolio.jpg)
+
+## App Description
 
 Users were required to invite at least one and at most four friends to create a
 group. They can also join a group, however they can only be a part of one group
