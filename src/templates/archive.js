@@ -115,11 +115,7 @@ const Archive = props => (
             </Date>
             {node.frontmatter.links ? (
               <LinkList links={node.frontmatter.links} />
-            ) : (
-              <ExtLink>
-                <LinkIcon /> Not Available
-              </ExtLink>
-            )}
+            ) : null}
           </MetaData>
           <Excerpt dangerouslySetInnerHTML={{ __html: node.excerpt }} />
           {node.frontmatter.tags ? (
