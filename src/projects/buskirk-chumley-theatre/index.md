@@ -8,7 +8,6 @@ links:
   - "https://www.buskirkchumley.org"
   - "https://www.bctboxoffice.org"
 tags:
-  - WordPress
-  - WP API
-
+  - "WordPress"
+  - "WP REST API"
 ---

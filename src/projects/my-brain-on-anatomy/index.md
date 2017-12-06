@@ -6,6 +6,8 @@ description: "My Brain on Anatomy contains interactive flipped classes for embry
 draft: false
 links:
   - "https://www.mybrainonanatomy.com"
+tags: 
+  - "Static Site"
 ---
 
 My Brain On Anatomy is an interactive website I've built for my partner's

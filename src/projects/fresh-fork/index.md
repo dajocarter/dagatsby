@@ -6,5 +6,9 @@ description: ""
 draft: false
 links: 
   - "https://thefreshforkonline.com"
+tags:
+  - "WordPress"
+  - "WooCommerce"
+  - "Composite Products"
 
 ---
