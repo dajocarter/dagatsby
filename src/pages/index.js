@@ -19,7 +19,7 @@ const Headline = styled.h1`
   text-align: center;
 `;
 
-const Blurb = styled.h3`
+const Blurb = styled.h2`
   text-align: center;
 `;
 
