@@ -1,5 +1,6 @@
 import React from "react";
 import Helmet from "react-helmet";
+import Anchor from "../components/styled/Anchor";
 import Content from "../components/styled/Content";
 import MarkdownBody from "../components/styled/MarkdownBody";
 import styled from "styled-components";
@@ -25,7 +26,9 @@ const LinkList = props => (
     {props.links.map((link, index) => (
       <ExtLink key={index}>
         <LinkIcon />
-        <Anchor href={link}>{link}</Anchor>
+        <Anchor target="_blank" href={link}>
+          {link}
+        </Anchor>
       </ExtLink>
     ))}
   </div>

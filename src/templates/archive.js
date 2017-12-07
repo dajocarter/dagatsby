@@ -90,7 +90,9 @@ const LinkList = props => (
     {props.links.map((link, index) => (
       <ExtLink key={index}>
         <LinkIcon />
-        <Anchor href={link}>{link}</Anchor>
+        <Anchor target="_blank" href={link}>
+          {link}
+        </Anchor>
       </ExtLink>
     ))}
   </div>
