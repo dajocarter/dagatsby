@@ -112,6 +112,13 @@ module.exports = {
         pathToConfigModule: `src/utils/typography.js`
       }
     },
-    `gatsby-plugin-styled-components`
+    `gatsby-plugin-styled-components`,
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        color: `#1997c6`,
+        showSpinner: false
+      }
+    }
   ]
 };
