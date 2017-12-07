@@ -10,6 +10,7 @@
     "gatsby": "^1.9.89",
     "gatsby-link": "^1.6.24",
     "gatsby-plugin-google-analytics": "^1.0.11",
+    "gatsby-plugin-google-tagmanager": "^1.0.10",
     "gatsby-plugin-manifest": "^1.0.4",
     "gatsby-plugin-offline": "^1.0.4",
     "gatsby-plugin-preact": "^1.0.3",
