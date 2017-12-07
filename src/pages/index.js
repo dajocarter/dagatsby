@@ -28,12 +28,15 @@ const Divider = styled.div`
   background-color: #cfd2da;
   height: 2px;
   width: 95%;
-  margin: 3.5rem auto 1.5rem;
+  margin-top: 3.5rem;
+  margin-right: auto;
+  margin-bottom: ${props => (props.multiline ? `2.25rem` : `1.5rem`)};
+  margin-left: auto;
 `;
 
 const DividerText = styled.span`
   background-color: #252830;
-  padding: 0.25rem;
+  padding: 0 0.75rem;
   text-align: center;
   width: fit-content;
   position: absolute;
@@ -113,8 +116,11 @@ const Index = ({ data }) => (
       I am a web developer, passionate about learning and motivated by solving
       problems efficiently.
     </Blurb>
-    <Divider>
-      <DividerText>Follow Me</DividerText>
+    <Divider multiline>
+      <DividerText>
+        Follow Me<br />
+        <em>@dajocarter</em>
+      </DividerText>
     </Divider>
     <BtnGroup>
       <IconLink backgroundColor={`#000`} color={`#fff`}>
