@@ -16,21 +16,26 @@ import PDFicon from "react-icons/lib/fa/file-pdf-o";
 
 const Headline = styled.h1`
   margin-top: 0;
+  text-align: center;
 `;
 
-const Blurb = styled.h3``;
+const Blurb = styled.h3`
+  text-align: center;
+`;
 
 const Divider = styled.div`
   position: relative;
   background-color: #cfd2da;
   height: 2px;
-  width: 90%;
+  width: 50%;
   margin: 2rem auto;
 `;
 
 const DividerText = styled.span`
   background-color: #252830;
   padding: 0.25rem;
+  text-align: center;
+  width: fit-content;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -42,6 +47,10 @@ const BtnGroup = styled.div`
   flex-flow: row wrap;
   justify-content: space-around;
   align-items: center;
+
+  .btn {
+    margin: 0 1rem 1rem 0;
+  }
 `;
 
 const bounce = keyframes`
@@ -72,8 +81,7 @@ const IconLink = styled.span`
   animation-duration: 1s;
   animation-fill-mode: both;
 
-  &:hover,
-  &:active {
+  &:hover {
     animation-name: ${bounce};
     transform-origin: center bottom;
   }
@@ -114,17 +122,17 @@ const Index = ({ data }) => (
           <GithubIcon />
         </Anchor>
       </IconLink>
-      <IconLink backgroundColor={`#f00`} color={`#fff`}>
-        <Anchor target="_blank" href={`mailto:dajocarter@gmail.com`}>
-          <MailIcon />
-        </Anchor>
-      </IconLink>
       <IconLink backgroundColor={`#0077b5`} color={`#fff`}>
         <Anchor
           target="_blank"
           href={`https://www.linkedin.com/in/dajocarter/`}
         >
           <LinkedinIcon />
+        </Anchor>
+      </IconLink>
+      <IconLink backgroundColor={`#f00`} color={`#fff`}>
+        <Anchor target="_blank" href={`mailto:dajocarter@gmail.com`}>
+          <MailIcon />
         </Anchor>
       </IconLink>
       <IconLink backgroundColor={`#1da1f2`} color={`#fff`}>
