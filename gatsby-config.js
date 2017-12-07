@@ -58,7 +58,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-tagmanager`,
       options: {
-        trackingId: `GTM-NZZR98G`
+        id: `GTM-NZZR98G`
       }
     },
     `gatsby-plugin-offline`,
