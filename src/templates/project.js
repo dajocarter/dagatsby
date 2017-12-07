@@ -6,16 +6,18 @@ import MarkdownBody from "../components/styled/MarkdownBody";
 import styled from "styled-components";
 import LinkIcon from "react-icons/lib/fa/external-link";
 
-const Date = styled.p`
+const LaunchDate = styled.p`
   margin-bottom: 0.3625rem;
 `;
 
-const ExtLink = Date.extend`
+const ExtLink = styled.p`
   display: flex;
   align-items: center;
+
   svg {
     margin-right: 0.5rem;
   }
+
   a {
     word-break: break-word;
   }
@@ -42,7 +44,7 @@ const Project = ({ data }) => (
       }`}
     />
     <h1>{data.markdownRemark.frontmatter.title}</h1>
-    <Date>Launched {data.markdownRemark.frontmatter.date}</Date>
+    <LaunchDate>Launched {data.markdownRemark.frontmatter.date}</LaunchDate>
     <div>
       {data.markdownRemark.frontmatter.links ? (
         <LinkList links={data.markdownRemark.frontmatter.links} />
