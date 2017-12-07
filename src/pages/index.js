@@ -118,12 +118,12 @@ const Index = ({ data }) => (
     </Divider>
     <BtnGroup>
       <IconLink backgroundColor={`#000`} color={`#fff`}>
-        <Anchor target="_blank" href={`https://github.com/dajocarter`}>
+        <Anchor target="_blank" href={`//github.com/dajocarter`}>
           <GithubIcon />
         </Anchor>
       </IconLink>
       <IconLink backgroundColor={`#0077b5`} color={`#fff`}>
-        <Anchor target="_blank" href={`https://www.linkedin.com/in/dajocarter`}>
+        <Anchor target="_blank" href={`//www.linkedin.com/in/dajocarter`}>
           <LinkedinIcon />
         </Anchor>
       </IconLink>
@@ -133,12 +133,12 @@ const Index = ({ data }) => (
         </Anchor>
       </IconLink>
       <IconLink backgroundColor={`#1da1f2`} color={`#fff`}>
-        <Anchor target="_blank" href={`https://twitter.com/dajocarter`}>
+        <Anchor target="_blank" href={`//twitter.com/dajocarter`}>
           <TwitterIcon />
         </Anchor>
       </IconLink>
       <IconLink backgroundColor={`#fff`} color={`#000`}>
-        <Anchor target="_blank" href={`https://www.instagram.com/dajocarter`}>
+        <Anchor target="_blank" href={`//www.instagram.com/dajocarter`}>
           <InstaIcon />
         </Anchor>
       </IconLink>
