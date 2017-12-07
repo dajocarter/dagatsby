@@ -1,7 +1,7 @@
 ---
 title: "Necter: Hybrid Mobile App"
 slug: "necter"
-date: "2015-06-26T12:57:09-04:00"
+date: "2015-07-14T12:57:09-04:00"
 description: "Your friends should meet my friends."
 draft: false
 tags:
