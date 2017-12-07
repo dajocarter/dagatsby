@@ -118,27 +118,47 @@ const Index = ({ data }) => (
     </Divider>
     <BtnGroup>
       <IconLink backgroundColor={`#000`} color={`#fff`}>
-        <Anchor target="_blank" href={`//github.com/dajocarter`}>
+        <Anchor
+          title={`GitHub @dajocarter`}
+          target="_blank"
+          href={`//github.com/dajocarter`}
+        >
           <GithubIcon />
         </Anchor>
       </IconLink>
       <IconLink backgroundColor={`#0077b5`} color={`#fff`}>
-        <Anchor target="_blank" href={`//www.linkedin.com/in/dajocarter`}>
+        <Anchor
+          title={`LinkedIn @dajocarter`}
+          target="_blank"
+          href={`//www.linkedin.com/in/dajocarter`}
+        >
           <LinkedinIcon />
         </Anchor>
       </IconLink>
       <IconLink backgroundColor={`#f00`} color={`#fff`}>
-        <Anchor target="_blank" href={`mailto:dajocarter@gmail.com`}>
+        <Anchor
+          title={`Gmail @dajocarter`}
+          target="_blank"
+          href={`mailto:dajocarter@gmail.com`}
+        >
           <MailIcon />
         </Anchor>
       </IconLink>
       <IconLink backgroundColor={`#1da1f2`} color={`#fff`}>
-        <Anchor target="_blank" href={`//twitter.com/dajocarter`}>
+        <Anchor
+          title={`Twitter @dajocarter`}
+          target="_blank"
+          href={`//twitter.com/dajocarter`}
+        >
           <TwitterIcon />
         </Anchor>
       </IconLink>
       <IconLink backgroundColor={`#fff`} color={`#000`}>
-        <Anchor target="_blank" href={`//www.instagram.com/dajocarter`}>
+        <Anchor
+          title={`Instagram @dajocarter`}
+          target="_blank"
+          href={`//www.instagram.com/dajocarter`}
+        >
           <InstaIcon />
         </Anchor>
       </IconLink>
