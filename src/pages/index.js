@@ -164,14 +164,14 @@ const Index = ({ data }) => (
       </IconLink>
     </BtnGroup>
     <Divider>
-      <DividerText>Download Résumés</DividerText>
+      <DividerText>Download Résumé</DividerText>
     </Divider>
     <BtnGroup>
       <Anchor className="btn btn-primary btn-icon" href={resume}>
         <PDFicon /> Relevant Résumé
       </Anchor>
       <Anchor className="btn btn-primary btn-icon" href={cvitae}>
-        <PDFicon /> Complete Résumé
+        <PDFicon /> Curriculum Vitae
       </Anchor>
     </BtnGroup>
   </Content>
