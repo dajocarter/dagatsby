@@ -61,6 +61,49 @@ module.exports = {
         id: `GTM-NZZR98G`
       }
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `dajocarter`,
+        short_name: `dajocarter`,
+        start_url: `/`,
+        background_color: `#252830`,
+        theme_color: `#cfd2da`,
+        display: `minimal-ui`,
+        icons: [
+          {
+            src: `/favicons/android-chrome-192x192.png`,
+            sizes: `192x192`,
+            type: `image/png`
+          },
+          {
+            src: `/favicons/android-chrome-256x256.png`,
+            sizes: `256x256`,
+            type: `image/png`
+          },
+          {
+            src: `/favicons/aaple-touch-icon.png`,
+            sizes: `180x180`,
+            type: `image/png`
+          },
+          {
+            src: `/favicons/favicon-16x16.png`,
+            sizes: `16x16`,
+            type: `image/png`
+          },
+          {
+            src: `/favicons/favicon-32x32.png`,
+            sizes: `32x32`,
+            type: `image/png`
+          },
+          {
+            src: `/favicons/mstile-150x150.png`,
+            sizes: `150x150`,
+            type: `image/png`
+          }
+        ]
+      }
+    },
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     {
