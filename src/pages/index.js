@@ -45,14 +45,20 @@ const DividerText = styled.span`
   transform: translate(-50%, -50%);
 `;
 
-const BtnGroup = styled.div`
+const IconGroup = styled.div`
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
+`;
 
-  .btn {
-    margin: 0 1rem 1rem 0;
+const BtnGroup = IconGroup.extend`
+  @media (max-width: 400px) {
+    flex-flow: column nowrap;
+
+    .btn:not(:last-of-type) {
+      margin-bottom: 1rem;
+    }
   }
 `;
 
@@ -122,7 +128,7 @@ const Index = ({ data }) => (
         <em>@dajocarter</em>
       </DividerText>
     </Divider>
-    <BtnGroup>
+    <IconGroup>
       <IconLink backgroundColor={`#000`} color={`#fff`}>
         <Anchor
           title={`GitHub @dajocarter`}
@@ -168,7 +174,7 @@ const Index = ({ data }) => (
           <InstaIcon />
         </Anchor>
       </IconLink>
-    </BtnGroup>
+    </IconGroup>
     <Divider>
       <DividerText>Download Résumé</DividerText>
     </Divider>
