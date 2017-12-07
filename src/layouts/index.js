@@ -18,23 +18,23 @@ const Main = styled.main`
   flex-flow: row wrap;
   justify-content: ${props => (props.home ? `center` : `flex-start`)};
   align-items: ${props => (props.home ? `center` : `flex-start`)};
-  margin-top: ${props => (props.home ? `0px` : `91px`)};
+  margin-top: 91px;
   margin-right: auto;
   margin-left: auto;
   max-width: 768px;
-  min-height: ${props => (props.home ? `100vh` : `calc(100vh - 91px)`)};
+  min-height: calc(100vh - 91px);
   padding: 1rem;
   @media (max-width: 558px) {
-    margin-top: ${props => (props.home ? `0px` : `135px`)};
-    min-height: ${props => (props.home ? `100vh` : `calc(100vh - 135px)`)};
+    margin-top: 135px;
+    min-height: calc(100vh - 135px);
   }
   @media (max-width: 480px) {
-    margin-top: ${props => (props.home ? `0px` : `77px`)};
-    min-height: ${props => (props.home ? `100vh` : `calc(100vh - 77px)`)};
+    margin-top: 77px;
+    min-height: calc(100vh - 77px);
   }
   @media (max-width: 476px) {
-    margin-top: ${props => (props.home ? `0px` : `114px`)};
-    min-height: ${props => (props.home ? `100vh` : `calc(100vh - 114px)`)};
+    margin-top: 114px;
+    min-height: calc(100vh - 114px);
   }
 `;
 

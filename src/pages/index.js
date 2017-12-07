@@ -27,8 +27,8 @@ const Divider = styled.div`
   position: relative;
   background-color: #cfd2da;
   height: 2px;
-  width: 50%;
-  margin: 2rem auto;
+  width: 95%;
+  margin: 3.5rem auto 1.5rem;
 `;
 
 const DividerText = styled.span`
