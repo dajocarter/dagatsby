@@ -123,10 +123,7 @@ const Index = ({ data }) => (
         </Anchor>
       </IconLink>
       <IconLink backgroundColor={`#0077b5`} color={`#fff`}>
-        <Anchor
-          target="_blank"
-          href={`https://www.linkedin.com/in/dajocarter/`}
-        >
+        <Anchor target="_blank" href={`https://www.linkedin.com/in/dajocarter`}>
           <LinkedinIcon />
         </Anchor>
       </IconLink>
@@ -141,7 +138,7 @@ const Index = ({ data }) => (
         </Anchor>
       </IconLink>
       <IconLink backgroundColor={`#fff`} color={`#000`}>
-        <Anchor target="_blank" href={`https://www.instagram.com/dajocarter/`}>
+        <Anchor target="_blank" href={`https://www.instagram.com/dajocarter`}>
           <InstaIcon />
         </Anchor>
       </IconLink>
