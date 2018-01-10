@@ -62,37 +62,15 @@ const BtnGroup = IconGroup.extend`
   }
 `;
 
-const bounce = keyframes`
-  from, 20%, 53%, 80%, to {
-    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-    transform: translate3d(0,0,0);
-  }
-
-  40%, 43% {
-    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
-    transform: translate3d(0, -30px, 0);
-  }
-
-  70% {
-    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
-    transform: translate3d(0, -15px, 0);
-  }
-
-  90% {
-    transform: translate3d(0, -4px, 0);
-  }
-`;
-
 const IconLink = styled.span`
   background-color: ${props => props.backgroundColor};
   width: 2rem;
   height: 2rem;
-  animation-duration: 1s;
-  animation-fill-mode: both;
+  transition: all 0.2s ease-in-out;
 
   &:hover {
-    animation-name: ${bounce};
-    transform-origin: center bottom;
+    transform: translateY(4px);
+    transform-origin: center;
   }
 
   &,
