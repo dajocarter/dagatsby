@@ -27,6 +27,8 @@ While the grains were steeping, the recipe called for 6 cups of water to be heat
 
 To get it to a boil, I turned the heat up significantly on the burner and reached the boiling point pretty quickly. I think it was less than 20 minutes. Right before it hit boiling, I got a layer of foam on top which dissipated as soon as hit boiling. At this point, I added my first bag of hops and started my 60 minute countdown. This immediately caused a boil-over so I turned the burner down very low and was fine for the rest of the boil.
 
+<markdown-video src="boiling-wort" controls loop></markdown-video>
+
 ## Chilling the Wort
 
 I don't have access to a hose and my kitchen sink is pretty small so I opted for an ice bath to chill my wort. The recipe called to top off to 5.5 gallons after chilling, but I decided that pouring in the water would help cool it down so I did that while it chilled instead of after. I picked up one of those big Rubbermaid tubs from Target and started to fill it with cool water from the bathtub. While that was filling up, I placed my brew kettle in the water to get it to start chilling. There's a Marsh grocery store just down the street from me going out of business, so I got three big bags of ice on the cheap and filled the tub with that too. It didn't take long to cool the kettle after that so I ended up pulling it out at about 60 degrees. The recipe called for 70 so let's see how that goes :/
