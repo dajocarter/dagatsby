@@ -58,12 +58,6 @@ module.exports = {
 			}
 		},
 		{
-			resolve: `gatsby-plugin-google-tagmanager`,
-			options: {
-				id: `GTM-NZZR98G`
-			}
-		},
-		{
 			resolve: `gatsby-plugin-manifest`,
 			options: {
 				name: `dajocarter`,
