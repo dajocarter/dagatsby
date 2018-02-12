@@ -7,6 +7,7 @@ import Anchor from "../components/styled/Anchor";
 import styled, { keyframes } from "styled-components";
 import resume from "../../static/David-Carter-Resume.pdf";
 import cvitae from "../../static/David-Carter-Curriculum-Vitae.pdf";
+import profileImg from "../../static/profile-pic.jpg";
 import InstaIcon from "react-icons/lib/fa/instagram";
 import TwitterIcon from "react-icons/lib/fa/twitter";
 import LinkedinIcon from "react-icons/lib/fa/linkedin";
@@ -94,7 +95,23 @@ const IconLink = styled.span`
 
 const Index = ({ data }) => (
   <Content>
-    <Helmet title={data.site.siteMetadata.title} />
+    <Helmet>
+      { /* General Tags */}
+      <title>{data.site.metaData.title}</title>
+      <meta name="description" content={data.site.metaData.description} />
+      <meta name="image" content={profileImg} />
+      { /* Facebook Tags */}
+      <meta property="og:title" content={data.site.metaData.title} />
+      <meta property="og:url" content={data.site.metaData.url} />
+      <meta property="og:description" content={data.site.metaData.description} />
+      <meta property="og:image" content={profileImg} />
+      { /* Twitter Tags */}
+      <meta name="twitter:title" content={data.site.metaData.title} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:creator" content="@dajocarter" />
+      <meta name="twitter:description" content={data.site.metaData.description} />
+      <meta name="twitter:image" content={profileImg} />
+    </Helmet>
     <Headline>Hi, I'm David Carter.</Headline>
     <Blurb>
       I am a web developer, passionate about learning and motivated by solving
@@ -176,8 +193,10 @@ export default Index;
 export const pageQuery = graphql`
   query IndexQuery {
     site {
-      siteMetadata {
+      metaData {
         title
+        description
+        url
       }
     }
   }
