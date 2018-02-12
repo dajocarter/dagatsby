@@ -1,7 +1,9 @@
 module.exports = {
 	metaData: {
 		title: "David Carter | Web Developer",
-		author: "David Carter | Web Developer"
+		author: "David Carter",
+		description: "Hi, my name's David Carter and I'm a web developer specializing in custom WordPress development. I'm passionate about learning and motivated to solve problems efficiently.",
+		url: "https://www.dajocarter.com",
 	},
 	plugins: [
 		{
