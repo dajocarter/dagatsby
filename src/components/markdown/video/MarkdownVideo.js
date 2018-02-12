@@ -1,6 +1,6 @@
 import React from "react";
-import BoilingWortVid from "../../static/boiling-wort.mp4";
-import BoilingWordPoster from "../../static/boiling-wort.jpg";
+import BoilingWortVid from "./boiling-wort.mp4";
+import BoilingWordPoster from "./boiling-wort.jpg";
 
 const MarkdownVideo = props => {
   const { src, ...attributes } = props;

@@ -3,7 +3,7 @@ import Helmet from "react-helmet";
 import Content from "../components/styled/Content";
 import MarkdownBody from "../components/styled/MarkdownBody";
 import rehypeReact from "rehype-react";
-import MarkdownVideo from "../components/MarkdownVideo";
+import MarkdownVideo from "../components/markdown/video/MarkdownVideo";
 
 const renderAst = new rehypeReact({
   createElement: React.createElement,
