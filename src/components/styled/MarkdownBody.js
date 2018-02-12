@@ -48,6 +48,10 @@ const ArticleStyles = styled.div`
     padding-left: 0.75rem;
     border-left: 0.25rem solid #e9c163;
   }
+
+  video {
+    width: 100%;
+  }
 `;
 
 const MarkdownBody = props => <ArticleStyles {...props} />;
