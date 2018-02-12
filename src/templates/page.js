@@ -7,7 +7,7 @@ const Page = ({ data }) => (
   <Content>
     <Helmet
       title={`${data.markdownRemark.frontmatter.title} | ${data.site
-        .siteMetadata.title}`}
+        .metaData.title}`}
     />
     <MarkdownBody
       dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
@@ -20,7 +20,7 @@ export default Page;
 export const pageQuery = graphql`
   query PageBySlug($slug: String!) {
     site {
-      siteMetadata {
+      metaData {
         title
         author
       }

@@ -5,7 +5,7 @@ import Archive from "../templates/archive";
 const Projects = ({ data }) => (
   <Archive
     list={data.allMarkdownRemark.edges}
-    title={`Projects | ${data.site.siteMetadata.title}`}
+    title={`Projects | ${data.site.metaData.title}`}
     prefix={`projects`}
   />
 );
@@ -19,7 +19,7 @@ export default Projects;
 export const projectsQuery = graphql`
   query ProjectsQuery {
     site {
-      siteMetadata {
+      metaData {
         title
       }
     }

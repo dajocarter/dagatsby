@@ -40,8 +40,8 @@ const Project = ({ data }) => (
   <Content>
     <Helmet
       title={`${data.markdownRemark.frontmatter.title} | ${
-        data.site.siteMetadata.title
-      }`}
+        data.site.metaData.title
+        }`}
     />
     <h1>{data.markdownRemark.frontmatter.title}</h1>
     <LaunchDate>Launched {data.markdownRemark.frontmatter.date}</LaunchDate>
@@ -49,10 +49,10 @@ const Project = ({ data }) => (
       {data.markdownRemark.frontmatter.links ? (
         <LinkList links={data.markdownRemark.frontmatter.links} />
       ) : (
-        <ExtLink>
-          <LinkIcon /> Links Not Available
+          <ExtLink>
+            <LinkIcon /> Links Not Available
         </ExtLink>
-      )}
+        )}
     </div>
     <MarkdownBody
       dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
@@ -65,7 +65,7 @@ export default Project;
 export const projectQuery = graphql`
   query ProjectBySlug($slug: String!) {
     site {
-      siteMetadata {
+      metaData {
         title
         author
       }

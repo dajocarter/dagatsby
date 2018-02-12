@@ -1,5 +1,5 @@
 module.exports = {
-	siteMetadata: {
+	metaData: {
 		title: "David Carter | Web Developer",
 		author: "David Carter | Web Developer"
 	},
