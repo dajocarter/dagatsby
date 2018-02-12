@@ -23,7 +23,7 @@ const Title = styled.h3`
   margin-top: 0;
 `;
 
-const MetaData = styled.div`
+const siteMetadata = styled.div`
   font-style: italic;
 
   svg {
@@ -110,7 +110,7 @@ const Archive = props => (
               {node.frontmatter.title}
             </Anchor>
           </Title>
-          <MetaData>
+          <siteMetadata>
             <Date>
               <ClockIcon />
               {node.frontmatter.date}
@@ -118,7 +118,7 @@ const Archive = props => (
             {node.frontmatter.links ? (
               <LinkList links={node.frontmatter.links} />
             ) : null}
-          </MetaData>
+          </siteMetadata>
           <Excerpt dangerouslySetInnerHTML={{ __html: node.excerpt }} />
           {node.frontmatter.tags ? (
             <TagList tags={node.frontmatter.tags} />

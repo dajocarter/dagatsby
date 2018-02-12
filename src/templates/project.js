@@ -40,7 +40,7 @@ const Project = ({ data }) => (
   <Content>
     <Helmet
       title={`${data.markdownRemark.frontmatter.title} | ${
-        data.site.metaData.title
+        data.site.siteMetadata.title
         }`}
     />
     <h1>{data.markdownRemark.frontmatter.title}</h1>
@@ -65,7 +65,7 @@ export default Project;
 export const projectQuery = graphql`
   query ProjectBySlug($slug: String!) {
     site {
-      metaData {
+      siteMetadata {
         title
         author
       }

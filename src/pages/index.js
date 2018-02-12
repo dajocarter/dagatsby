@@ -97,19 +97,19 @@ const Index = ({ data }) => (
   <Content>
     <Helmet>
       { /* General Tags */}
-      <title>{data.site.metaData.title}</title>
-      <meta name="description" content={data.site.metaData.description} />
+      <title>{data.site.siteMetadata.title}</title>
+      <meta name="description" content={data.site.siteMetadata.description} />
       <meta name="image" content={profileImg} />
       { /* Facebook Tags */}
-      <meta property="og:title" content={data.site.metaData.title} />
-      <meta property="og:url" content={data.site.metaData.url} />
-      <meta property="og:description" content={data.site.metaData.description} />
+      <meta property="og:title" content={data.site.siteMetadata.title} />
+      <meta property="og:url" content={data.site.siteMetadata.url} />
+      <meta property="og:description" content={data.site.siteMetadata.description} />
       <meta property="og:image" content={profileImg} />
       { /* Twitter Tags */}
-      <meta name="twitter:title" content={data.site.metaData.title} />
+      <meta name="twitter:title" content={data.site.siteMetadata.title} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:creator" content="@dajocarter" />
-      <meta name="twitter:description" content={data.site.metaData.description} />
+      <meta name="twitter:description" content={data.site.siteMetadata.description} />
       <meta name="twitter:image" content={profileImg} />
     </Helmet>
     <Headline>Hi, I'm David Carter.</Headline>
@@ -193,7 +193,7 @@ export default Index;
 export const pageQuery = graphql`
   query IndexQuery {
     site {
-      metaData {
+      siteMetadata {
         title
         description
         url

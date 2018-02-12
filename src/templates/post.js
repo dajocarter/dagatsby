@@ -7,7 +7,7 @@ const Post = ({ data }) => (
   <Content>
     <Helmet
       title={`${data.markdownRemark.frontmatter.title} | ${data.site
-        .metaData.title}`}
+        .siteMetadata.title}`}
     />
     <h1>{data.markdownRemark.frontmatter.title}</h1>
     <p>{data.markdownRemark.frontmatter.date}</p>
@@ -22,7 +22,7 @@ export default Post;
 export const postQuery = graphql`
   query BlogPostBySlug($slug: String!) {
     site {
-      metaData {
+      siteMetadata {
         title
         author
       }

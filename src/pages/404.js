@@ -5,7 +5,7 @@ import Content from "../components/styled/Content";
 
 const FourOhFour = ({ data }) => (
   <Content>
-    <Helmet title={`${data.site.metaData.title} | 404`} />
+    <Helmet title={`${data.site.siteMetadata.title} | 404`} />
     <h1>404 Error</h1>
     <h2>You look lost.</h2>
     <h3>Use the sitemap below to find your way.</h3>
@@ -25,7 +25,7 @@ export default FourOhFour;
 export const pageQuery = graphql`
   query FourOhFourQuery {
     site {
-      metaData {
+      siteMetadata {
         title
       }
     }

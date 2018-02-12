@@ -5,7 +5,7 @@ import Archive from "../templates/archive";
 const Posts = ({ data }) => (
   <Archive
     list={data.allMarkdownRemark.edges}
-    title={`Posts | ${data.site.metaData.title}`}
+    title={`Posts | ${data.site.siteMetadata.title}`}
     prefix={`posts`}
   />
 );
@@ -19,7 +19,7 @@ export default Posts;
 export const postsQuery = graphql`
   query PostsQuery {
     site {
-      metaData {
+      siteMetadata {
         title
       }
     }
