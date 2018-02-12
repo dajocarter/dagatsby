@@ -3,6 +3,7 @@ title: "WooCommerce Customizations"
 slug: "woocommerce-customizations"
 date: "2017-06-24T13:50:46+02:00"
 description: "A compilation of customizations I have had to make to WooCommerce installations."
+image: ""
 draft: false
 categories:
   - "Coding"

@@ -3,6 +3,7 @@ title: "What I Learned from React for Beginners"
 slug: "react-for-beginners"
 date: "2017-10-03T22:48:34-04:00"
 description: "My notes from going through the ReactForBeginners course by Wes Bos."
+image: ""
 draft: true
 categories:
   - "Coding"

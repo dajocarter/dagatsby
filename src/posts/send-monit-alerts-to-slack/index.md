@@ -3,6 +3,7 @@ title: "Send Monit Alerts to Slack"
 slug: "send-monit-alerts-to-slack"
 date: "2017-06-25T19:09:44-04:00"
 description: "This post will show you how to install Monit on a Ubuntu server to send alerts to you on Slack. If you're not using Slack, this post is still applicable as intructions for installation."
+image: ""
 draft: false
 categories:
   - "Coding"

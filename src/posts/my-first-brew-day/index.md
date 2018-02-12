@@ -3,6 +3,7 @@ title: "My First Brew Day"
 slug: "my-first-brew-day"
 date: "2017-07-03T22:48:34-04:00"
 description: "A recollection and notes of my first time brewing beer."
+image: "./boiling-wort.jpg"
 draft: false
 categories:
   - "Homebrewing"
