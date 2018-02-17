@@ -28,7 +28,7 @@ const ItemImg = styled(Img)`
 `;
 
 const ItemContent = styled.div`
-  flex: 0 0 auto;
+  flex: 1 0 auto;
   width: calc(100% - 350px);
   padding-left: 1rem;
   @media (max-width: 767px) {
@@ -57,9 +57,11 @@ const ItemExcerpt = styled.div``;
 const ListItem = props => {
   return (
     <Item>
-      <ItemImg
-        resolutions={props.node.frontmatter.image.childImageSharp.resolutions}
-      />
+      {props.node.frontmatter.image && (
+        <ItemImg
+          resolutions={props.node.frontmatter.image.childImageSharp.resolutions}
+        />
+      )}
       <ItemContent>
         <ItemTitle>
           <ItemLink to={`/posts/${props.node.frontmatter.slug}/`}>
