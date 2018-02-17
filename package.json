@@ -7,24 +7,24 @@
     "url": "https://github.com/gatsbyjs/gatsby-starter-blog/issues"
   },
   "dependencies": {
-    "gatsby": "^1.9.192",
-    "gatsby-image": "^1.0.35",
-    "gatsby-link": "^1.6.36",
-    "gatsby-plugin-google-analytics": "^1.0.17",
-    "gatsby-plugin-manifest": "^1.0.13",
-    "gatsby-plugin-offline": "^1.0.13",
-    "gatsby-plugin-react-helmet": "^2.0.4",
-    "gatsby-plugin-sharp": "^1.6.27",
-    "gatsby-plugin-styled-components": "^2.0.5",
-    "gatsby-plugin-typography": "^1.7.13",
-    "gatsby-remark-copy-linked-files": "^1.5.26",
-    "gatsby-remark-images": "^1.5.43",
-    "gatsby-remark-prismjs": "^1.2.14",
-    "gatsby-remark-responsive-iframe": "^1.4.16",
-    "gatsby-remark-smartypants": "^1.4.10",
-    "gatsby-source-filesystem": "^1.5.18",
-    "gatsby-transformer-remark": "^1.7.31",
-    "gatsby-transformer-sharp": "^1.6.18",
+    "gatsby": "^1.9.202",
+    "gatsby-image": "^1.0.37",
+    "gatsby-link": "^1.6.37",
+    "gatsby-plugin-google-analytics": "^1.0.19",
+    "gatsby-plugin-manifest": "^1.0.14",
+    "gatsby-plugin-offline": "^1.0.14",
+    "gatsby-plugin-react-helmet": "^2.0.5",
+    "gatsby-plugin-sharp": "^1.6.30",
+    "gatsby-plugin-styled-components": "^2.0.7",
+    "gatsby-plugin-typography": "^1.7.14",
+    "gatsby-remark-copy-linked-files": "^1.5.27",
+    "gatsby-remark-images": "^1.5.46",
+    "gatsby-remark-prismjs": "^1.2.15",
+    "gatsby-remark-responsive-iframe": "^1.4.17",
+    "gatsby-remark-smartypants": "^1.4.11",
+    "gatsby-source-filesystem": "^1.5.20",
+    "gatsby-transformer-remark": "^1.7.32",
+    "gatsby-transformer-sharp": "^1.6.19",
     "react-helmet": "^5.2.0",
     "react-icons": "^2.2.7",
     "rehype-react": "^3.0.2",
@@ -35,9 +35,7 @@
     "prettier": "^1.10.2"
   },
   "homepage": "https://github.com/noahg/gatsby-starter-blog-no-styles#readme",
-  "keywords": [
-    "gatsby"
-  ],
+  "keywords": ["gatsby"],
   "license": "MIT",
   "main": "n/a",
   "repository": {
@@ -46,12 +44,15 @@
   },
   "scripts": {
     "dev": "gatsby develop",
-    "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
+    "lint":
+      "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
+    "format":
+      "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
     "develop": "gatsby develop",
     "build": "gatsby build",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
-    "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"
+    "fix-semi":
+      "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"
   }
 }
