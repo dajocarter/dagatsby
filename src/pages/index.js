@@ -183,13 +183,7 @@ export const pageQuery = graphql`
           frontmatter {
             slug
             date(formatString: "MMMM D, YYYY")
-            image {
-              childImageSharp {
-                resolutions(width: 350) {
-                  ...GatsbyImageSharpResolutions_tracedSVG
-                }
-              }
-            }
+
             title
             tags
           }
@@ -210,13 +204,7 @@ export const pageQuery = graphql`
           frontmatter {
             slug
             date(formatString: "MMMM D, YYYY")
-            image {
-              childImageSharp {
-                resolutions(width: 350) {
-                  ...GatsbyImageSharpResolutions_tracedSVG
-                }
-              }
-            }
+
             title
             tags
           }
