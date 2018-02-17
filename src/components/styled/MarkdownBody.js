@@ -3,6 +3,15 @@ import styled from "styled-components";
 
 const ArticleStyles = styled.div`
   h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #cfd2da;
+  }
+
+  h1,
   h2 {
     border-bottom: 1px solid #fff;
     margin: 2rem 0 1rem;
