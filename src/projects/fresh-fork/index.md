@@ -3,6 +3,7 @@ title: "The Fresh Fork"
 slug: "fresh-fork"
 date: "2016-05-05T12:57:09-04:00"
 description: ""
+image: "./fresh-fork-landing.png"
 draft: false
 links: 
   - "https://thefreshforkonline.com"

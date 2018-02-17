@@ -3,7 +3,7 @@ title: "Send Monit Alerts to Slack"
 slug: "send-monit-alerts-to-slack"
 date: "2017-06-25T19:09:44-04:00"
 description: "This post will show you how to install Monit on a Ubuntu server to send alerts to you on Slack. If you're not using Slack, this post is still applicable as intructions for installation."
-image: ""
+image: "./luca-bravo-217276.jpg"
 draft: false
 categories:
   - "Coding"
@@ -14,6 +14,7 @@ tags:
 ---
 
 ## Installing Monit
+
 This is as easy as `sudo apt-get install monit`. Just a heads-up to ServerPilot users, you'll have to SSH in to your server as `root` or another user with root/sudo priviledges. If you do SSH in as root, you can leave off all of the `sudo`s.
 
 Now that Monit is installed, the next step is to turn it on so `cd /etc/monit`. If you `tree` here, you'll see the following directory structure:
@@ -49,6 +50,7 @@ $ tree /etc/monit
 ```
 
 ## Configure Monit
+
 The first thing we'll need to do is edit the `monitrc` file so `sudo nano monitrc`. Now scroll down and uncomment the following lines:
 
 ```shell
@@ -95,6 +97,7 @@ check process php5-fpm with pidfile /var/run/php5.5-fpm-sp.pid
 The `-sp` suffix is if you're using ServerPilot, but if you're not just leave it off. If you're in doubt of the name of the pid, just `ls /var/run` to double-check. Once that's done we can check that everything is configured correctly with `sudo monit -t`. If successful, then restart Monit with `sudo service monit restart` and start monitoring your configured services with `sudo monit start all`. Finally, you can double-check that everything is running with `sudo monit status`.
 
 ## Send Monit Alerts to Slack
+
 The first thing you'll have to do is set up an Incoming Webhook with your Slack team and copy the url for later. Now we'll configure a payload to send to Slack. So from still within the `/etc/monit` directory, go ahead and `sudo nano slack.sh`. **Be sure** to change the channel, username, and emoji name to your choosing.
 
 ```shell
