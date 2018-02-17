@@ -1,186 +1,146 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Link, { navigateTo } from "gatsby-link";
+import Img from "gatsby-image";
 import Helmet from "react-helmet";
 import Content from "../components/styled/Content";
 import Anchor from "../components/styled/Anchor";
-import styled, { keyframes } from "styled-components";
-import resume from "../../static/David-Carter-Resume.pdf";
-import cvitae from "../../static/David-Carter-Curriculum-Vitae.pdf";
-import profileImg from "../../static/profile-pic.jpg";
-import InstaIcon from "react-icons/lib/fa/instagram";
-import TwitterIcon from "react-icons/lib/fa/twitter";
-import LinkedinIcon from "react-icons/lib/fa/linkedin";
-import MailIcon from "react-icons/lib/fa/envelope";
-import GithubIcon from "react-icons/lib/fa/github-alt";
-import PDFicon from "react-icons/lib/fa/file-pdf-o";
+import HeroUnit from "../components/HeroUnit";
+import ListItem from "../components/ListItem";
+import styled from "styled-components";
 
-const Headline = styled.h1`
-  margin-top: 0;
-  text-align: center;
+const List = styled.div`
+  padding: 2rem 1rem;
 `;
 
-const Blurb = styled.h2`
-  text-align: center;
+const PostList = List.extend`
+  background: #31322d;
 `;
 
-const Divider = styled.div`
-  position: relative;
-  background-color: #cfd2da;
-  height: 2px;
-  width: 95%;
-  margin-top: 3.5rem;
-  margin-right: auto;
-  margin-bottom: ${props => (props.multiline ? `2.25rem` : `1.5rem`)};
+const ProjectList = List.extend`
+  background: #464642;
+`;
+
+const ArchiveLink = styled(Anchor)`
+  background: transparent;
+  border: 2px solid #39cccc;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  color: #fe7f2d;
+  display: block;
+  width: 200px;
+  text-align: center;
   margin-left: auto;
+  margin-right: auto;
+  &:hover {
+    color: #e71d36;
+  }
 `;
 
-const DividerText = styled.span`
-  background-color: #252830;
-  padding: 0 0.75rem;
-  text-align: center;
-  width: fit-content;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+const PostsLink = ArchiveLink.extend`
+  &:hover {
+    background: #102142;
+  }
 `;
 
-const IconGroup = styled.div`
+const ProjectsLink = ArchiveLink.extend`
+  &:hover {
+    background: #293357;
+  }
+`;
+
+const AboutMe = styled.div`
+  background: #31322d;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
+  padding: 2rem 1rem;
 `;
 
-const BtnGroup = IconGroup.extend`
-  @media (max-width: 400px) {
-    flex-flow: column nowrap;
+const Description = styled.p`
+  flex: 0 0 50%;
+  margin: 0;
 
-    .btn:not(:last-of-type) {
-      margin-bottom: 1rem;
-    }
+  @media (max-width: 1072px) {
+    padding-top: 1rem;
+  }
+  @media (min-width: 1073px) {
+    padding-left: 1rem;
   }
 `;
 
-const IconLink = styled.span`
-  background-color: ${props => props.backgroundColor};
-  width: 2rem;
-  height: 2rem;
-  transition: all 0.2s ease-in-out;
-
-  &:hover {
-    transform: translateY(4px);
-    transform-origin: center;
-  }
-
-  &,
-  a {
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  a {
-    color: ${props => props.color};
-    height: 100%;
-    width: 100%;
-
-    &:hover {
-      color: ${props => props.color};
-    }
-  }
+const ProfilePic = styled(Img)`
+  flex: 0 0 50%;
 `;
 
 const Index = ({ data }) => (
   <Content>
     <Helmet>
-      { /* General Tags */}
+      {/* General Tags */}
       <title>{data.site.siteMetadata.title}</title>
       <meta name="description" content={data.site.siteMetadata.description} />
-      <meta name="image" content={`${data.site.siteMetadata.url}${profileImg}`} />
-      { /* Facebook Tags */}
+      <meta
+        name="image"
+        content={`${data.site.siteMetadata.url}${
+          data.profileImg.childImageSharp.resolutions.src
+        }`}
+      />
+      {/* Facebook Tags */}
       <meta property="og:title" content={data.site.siteMetadata.title} />
       <meta property="og:url" content={data.site.siteMetadata.url} />
-      <meta property="og:description" content={data.site.siteMetadata.description} />
-      <meta property="og:image" content={`${data.site.siteMetadata.url}${profileImg}`} />
-      { /* Twitter Tags */}
+      <meta
+        property="og:description"
+        content={data.site.siteMetadata.description}
+      />
+      <meta
+        property="og:image"
+        content={`${data.site.siteMetadata.url}${
+          data.profileImg.childImageSharp.resolutions.src
+        }`}
+      />
+      {/* Twitter Tags */}
       <meta name="twitter:title" content={data.site.siteMetadata.title} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:creator" content="@dajocarter" />
-      <meta name="twitter:description" content={data.site.siteMetadata.description} />
-      <meta name="twitter:image" content={`${data.site.siteMetadata.url}${profileImg}`} />
+      <meta
+        name="twitter:description"
+        content={data.site.siteMetadata.description}
+      />
+      <meta
+        name="twitter:image"
+        content={`${data.site.siteMetadata.url}${
+          data.profileImg.childImageSharp.resolutions.src
+        }`}
+      />
     </Helmet>
-    <Headline>Hi, I'm David Carter.</Headline>
-    <Blurb>
-      I am a web developer, passionate about learning and motivated by solving
-      problems efficiently.
-    </Blurb>
-    <Divider multiline>
-      <DividerText>
-        Follow Me<br />
-        <em>@dajocarter</em>
-      </DividerText>
-    </Divider>
-    <IconGroup>
-      <IconLink backgroundColor={`#000`} color={`#fff`}>
-        <Anchor
-          title={`GitHub @dajocarter`}
-          target="_blank"
-          href={`//github.com/dajocarter`}
-        >
-          <GithubIcon />
-        </Anchor>
-      </IconLink>
-      <IconLink backgroundColor={`#0077b5`} color={`#fff`}>
-        <Anchor
-          title={`LinkedIn @dajocarter`}
-          target="_blank"
-          href={`//www.linkedin.com/in/dajocarter`}
-        >
-          <LinkedinIcon />
-        </Anchor>
-      </IconLink>
-      <IconLink backgroundColor={`#f00`} color={`#fff`}>
-        <Anchor
-          title={`Gmail @dajocarter`}
-          target="_blank"
-          href={`mailto:dajocarter@gmail.com`}
-        >
-          <MailIcon />
-        </Anchor>
-      </IconLink>
-      <IconLink backgroundColor={`#1da1f2`} color={`#fff`}>
-        <Anchor
-          title={`Twitter @dajocarter`}
-          target="_blank"
-          href={`//twitter.com/dajocarter`}
-        >
-          <TwitterIcon />
-        </Anchor>
-      </IconLink>
-      <IconLink backgroundColor={`#fff`} color={`#000`}>
-        <Anchor
-          title={`Instagram @dajocarter`}
-          target="_blank"
-          href={`//www.instagram.com/dajocarter`}
-        >
-          <InstaIcon />
-        </Anchor>
-      </IconLink>
-    </IconGroup>
-    <Divider>
-      <DividerText>Download Résumé</DividerText>
-    </Divider>
-    <BtnGroup>
-      <Anchor className="btn btn-primary btn-icon" href={resume}>
-        <PDFicon /> Relevant Résumé
-      </Anchor>
-      <Anchor className="btn btn-primary btn-icon" href={cvitae}>
-        <PDFicon /> Curriculum Vitae
-      </Anchor>
-    </BtnGroup>
+    <HeroUnit
+      img={data.heroImg.childImageSharp.sizes}
+      headline={`David Carter`}
+      blurb={`Expert in Custom WordPress Development`}
+    />
+    <PostList>
+      {data.posts.edges.map(({ node }, index) => (
+        <ListItem key={index} node={node} />
+      ))}
+      <PostsLink to={`/posts/`}>View All Posts</PostsLink>
+    </PostList>
+    <ProjectList>
+      {data.projects.edges.map(({ node }, index) => (
+        <ListItem key={index} node={node} />
+      ))}
+      <ProjectsLink to={`/projects/`}>View All Projects</ProjectsLink>
+    </ProjectList>
+    <AboutMe>
+      <ProfilePic resolutions={data.profileImg.childImageSharp.resolutions} />
+      <Description>
+        I am the Director of Technical Services at Tribeswell in Bloomington,
+        Indiana. My favorite part of going to work is developing complex
+        websites and solving all of the creative problems that arise in the
+        process. I also handle ongoing maintenance like plugin updates and
+        adding new features to sites, among other responsibilities.
+      </Description>
+    </AboutMe>
   </Content>
 );
 
@@ -197,6 +157,77 @@ export const pageQuery = graphql`
         title
         description
         url
+      }
+    }
+    heroImg: file(
+      relativePath: { eq: "images/sasha-instagram-com-sanfrancisco-320885.jpg" }
+    ) {
+      childImageSharp {
+        sizes(maxWidth: 6000) {
+          ...GatsbyImageSharpSizes_tracedSVG
+        }
+      }
+    }
+    profileImg: file(relativePath: { eq: "images/profile-pic.jpg" }) {
+      childImageSharp {
+        resolutions(width: 500) {
+          ...GatsbyImageSharpResolutions_tracedSVG
+          src
+        }
+      }
+    }
+    posts: allMarkdownRemark(
+      limit: 3
+      filter: {
+        fileAbsolutePath: { glob: "/**/*/src/posts/**/*.md" }
+        frontmatter: { draft: { eq: false } }
+      }
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
+      edges {
+        node {
+          excerpt
+          frontmatter {
+            slug
+            date(formatString: "MMMM D, YYYY")
+            image {
+              childImageSharp {
+                resolutions(width: 350) {
+                  ...GatsbyImageSharpResolutions_tracedSVG
+                }
+              }
+            }
+            title
+            tags
+          }
+        }
+      }
+    }
+    projects: allMarkdownRemark(
+      limit: 3
+      filter: {
+        fileAbsolutePath: { glob: "/**/*/src/projects/**/*.md" }
+        frontmatter: { draft: { eq: false } }
+      }
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
+      edges {
+        node {
+          excerpt
+          frontmatter {
+            slug
+            date(formatString: "MMMM D, YYYY")
+            image {
+              childImageSharp {
+                resolutions(width: 350) {
+                  ...GatsbyImageSharpResolutions_tracedSVG
+                }
+              }
+            }
+            title
+            tags
+          }
+        }
       }
     }
   }
