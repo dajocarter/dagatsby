@@ -21,12 +21,7 @@ const Post = ({ data }) => (
         name="description"
         content={data.markdownRemark.frontmatter.description}
       />
-      <meta
-        name="image"
-        content={`${data.site.siteMetadata.url}${
-          data.markdownRemark.frontmatter.image.childImageSharp.sizes.src
-        }`}
-      />
+      <meta name="image" content={`${data.site.siteMetadata.url}`} />
       {/* Facebook Tags */}
       <meta
         property="og:title"
@@ -42,12 +37,7 @@ const Post = ({ data }) => (
         property="og:description"
         content={data.markdownRemark.frontmatter.description}
       />
-      <meta
-        property="og:image"
-        content={`${data.site.siteMetadata.url}${
-          data.markdownRemark.frontmatter.image.childImageSharp.sizes.src
-        }`}
-      />
+      <meta property="og:image" content={`${data.site.siteMetadata.url}`} />
       {/* Twitter Tags */}
       <meta
         name="twitter:title"
@@ -59,12 +49,7 @@ const Post = ({ data }) => (
         name="twitter:description"
         content={data.markdownRemark.frontmatter.description}
       />
-      <meta
-        name="twitter:image"
-        content={`${data.site.siteMetadata.url}${
-          data.markdownRemark.frontmatter.image.childImageSharp.sizes.src
-        }`}
-      />
+      <meta name="twitter:image" content={`${data.site.siteMetadata.url}`} />
     </Helmet>
     <h1>{data.markdownRemark.frontmatter.title}</h1>
     <p>{data.markdownRemark.frontmatter.date}</p>
