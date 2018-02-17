@@ -23,7 +23,7 @@ const ProjectList = List.extend`
 
 const ArchiveLink = styled(Anchor)`
   background: transparent;
-  border: 2px solid #39cccc;
+  border: 1px solid #c8c8c8;
   border-radius: 4px;
   padding: 0.5rem 1rem;
   color: #fe7f2d;
@@ -33,21 +33,14 @@ const ArchiveLink = styled(Anchor)`
   margin-left: auto;
   margin-right: auto;
   &:hover {
+    background: #1d1e18;
     color: #e71d36;
   }
 `;
 
-const PostsLink = ArchiveLink.extend`
-  &:hover {
-    background: #102142;
-  }
-`;
+const PostsLink = ArchiveLink.extend``;
 
-const ProjectsLink = ArchiveLink.extend`
-  &:hover {
-    background: #293357;
-  }
-`;
+const ProjectsLink = ArchiveLink.extend``;
 
 const AboutMe = styled.div`
   background: #31322d;
