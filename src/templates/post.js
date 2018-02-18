@@ -51,8 +51,6 @@ const Post = ({ data }) => (
       />
       <meta name="twitter:image" content={`${data.site.siteMetadata.url}`} />
     </Helmet>
-    <h1>{data.markdownRemark.frontmatter.title}</h1>
-    <p>{data.markdownRemark.frontmatter.date}</p>
     <MarkdownBody>{renderAst(data.markdownRemark.htmlAst)}</MarkdownBody>
   </Content>
 );
