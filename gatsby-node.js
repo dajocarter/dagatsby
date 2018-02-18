@@ -11,7 +11,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       graphql(`
         {
           pages: allMarkdownRemark(
-            filter: { fileAbsolutePath: { glob: "/**/*/src/content/*.md" } }
+            filter: { fileAbsolutePath: { glob: "/**/*/src/pages/**/*.md" } }
           ) {
             edges {
               node {
