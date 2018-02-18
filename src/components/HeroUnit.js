@@ -48,12 +48,18 @@ const Blurb = styled.h2`
 const HeroUnit = props => {
   return (
     <UnitContainer>
-      <HeroImg sizes={props.img} />
-      <HeroContent>
-        <Headline>{props.headline}</Headline>
-        <Hr />
-        <Blurb>{props.blurb}</Blurb>
-      </HeroContent>
+      {props.sizes ? (
+        <HeroImg sizes={props.sizes} alt={props.alt} />
+      ) : (
+        <HeroImg resolutions={props.resolutions} alt={props.alt} />
+      )}
+      {(props.headline || props.blurb) && (
+        <HeroContent>
+          {props.headline && <Headline>{props.headline}</Headline>}
+          {props.headline && props.blurb && <Hr />}
+          {props.blurb && <Blurb>{props.blurb}</Blurb>}
+        </HeroContent>
+      )}
     </UnitContainer>
   );
 };
