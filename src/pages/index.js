@@ -185,8 +185,8 @@ export const pageQuery = graphql`
             date(formatString: "MMMM D, YYYY")
             image {
               childImageSharp {
-                resolutions(width: 350) {
-                  ...GatsbyImageSharpResolutions_tracedSVG
+                sizes(maxWidth: 660) {
+                  ...GatsbyImageSharpSizes_tracedSVG
                 }
               }
             }
@@ -212,8 +212,8 @@ export const pageQuery = graphql`
             date(formatString: "MMMM D, YYYY")
             image {
               childImageSharp {
-                resolutions(width: 350) {
-                  ...GatsbyImageSharpResolutions_tracedSVG
+                sizes(maxWidth: 660) {
+                  ...GatsbyImageSharpSizes_tracedSVG
                 }
               }
             }
