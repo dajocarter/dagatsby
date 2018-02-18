@@ -8,6 +8,7 @@ import Anchor from "../components/styled/Anchor";
 import HeroUnit from "../components/HeroUnit";
 import ListItem from "../components/ListItem";
 import styled from "styled-components";
+import { Grid, GridCol } from "griz";
 
 const List = styled.div`
   padding: 2rem 1rem;
@@ -42,30 +43,20 @@ const PostsLink = ArchiveLink.extend``;
 
 const ProjectsLink = ArchiveLink.extend``;
 
-const AboutMe = styled.div`
+const AboutMe = styled(Grid)`
   background: #31322d;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
   padding: 2rem 1rem;
+  align-items: center;
 `;
 
 const Description = styled.p`
-  flex: 0 0 50%;
   margin: 0;
-
-  @media (max-width: 1072px) {
-    padding-top: 1rem;
-  }
-  @media (min-width: 1073px) {
+  @media (min-width: 768px) {
     padding-left: 1rem;
   }
 `;
 
-const ProfilePic = styled(Img)`
-  flex: 0 0 50%;
-`;
+const ProfilePic = styled(Img)``;
 
 const Index = ({ data }) => (
   <Content>
@@ -124,15 +115,23 @@ const Index = ({ data }) => (
       ))}
       <ProjectsLink to={`/projects/`}>View All Projects</ProjectsLink>
     </ProjectList>
-    <AboutMe>
-      <ProfilePic resolutions={data.profileImg.childImageSharp.resolutions} />
-      <Description>
-        I am the Director of Technical Services at Tribeswell in Bloomington,
-        Indiana. My favorite part of going to work is developing complex
-        websites and solving all of the creative problems that arise in the
-        process. I also handle ongoing maintenance like plugin updates and
-        adding new features to sites, among other responsibilities.
-      </Description>
+    <AboutMe responsiveMd>
+      <GridCol>
+        <ProfilePic
+          sizes={data.profileImg.childImageSharp.sizes}
+          alt={`David Carter`}
+          title={`David Carter`}
+        />
+      </GridCol>
+      <GridCol>
+        <Description>
+          I am the Director of Technical Services at Tribeswell in Bloomington,
+          Indiana. My favorite part of going to work is developing complex
+          websites and solving all of the creative problems that arise in the
+          process. I also handle ongoing maintenance like plugin updates and
+          adding new features to sites, among other responsibilities.
+        </Description>
+      </GridCol>
     </AboutMe>
   </Content>
 );
