@@ -24,7 +24,7 @@ const HeroContent = styled.div`
 
 const Headline = styled.h1`
   letter-spacing: 2px;
-  margin-top: 0;
+  margin: 0;
   text-shadow: 1px 1px 1px #000;
   color: #fff;
 `;
@@ -35,13 +35,12 @@ const Hr = styled.hr`
   width: 69%;
   max-width: 500px;
   min-width: 250px;
-  margin-bottom: 0.725rem;
+  margin: 0.725rem 0;
   box-shadow: 1px 1px 1px #000;
 `;
 
 const Blurb = styled.h2`
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0;
   text-shadow: 1px 1px 1px #000;
   color: #fff;
 `;
