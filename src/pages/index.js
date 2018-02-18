@@ -153,7 +153,7 @@ export const pageQuery = graphql`
       }
     }
     heroImg: file(
-      relativePath: { eq: "images/sasha-instagram-com-sanfrancisco-320885.jpg" }
+      relativePath: { eq: "sasha-instagram-com-sanfrancisco-320885.jpg" }
     ) {
       childImageSharp {
         sizes(maxWidth: 6000) {
@@ -161,7 +161,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    profileImg: file(relativePath: { eq: "images/profile-pic.jpg" }) {
+    profileImg: file(relativePath: { eq: "profile-pic.jpg" }) {
       childImageSharp {
         sizes(maxWidth: 500) {
           ...GatsbyImageSharpSizes_tracedSVG
