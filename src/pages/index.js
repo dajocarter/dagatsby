@@ -67,7 +67,7 @@ const Index = ({ data }) => (
       <meta
         name="image"
         content={`${data.site.siteMetadata.url}${
-          data.profileImg.childImageSharp.resolutions.src
+          data.profileImg.childImageSharp.sizes.src
         }`}
       />
       {/* Facebook Tags */}
@@ -80,7 +80,7 @@ const Index = ({ data }) => (
       <meta
         property="og:image"
         content={`${data.site.siteMetadata.url}${
-          data.profileImg.childImageSharp.resolutions.src
+          data.profileImg.childImageSharp.sizes.src
         }`}
       />
       {/* Twitter Tags */}
@@ -94,7 +94,7 @@ const Index = ({ data }) => (
       <meta
         name="twitter:image"
         content={`${data.site.siteMetadata.url}${
-          data.profileImg.childImageSharp.resolutions.src
+          data.profileImg.childImageSharp.sizes.src
         }`}
       />
     </Helmet>
@@ -162,8 +162,8 @@ export const pageQuery = graphql`
     }
     profileImg: file(relativePath: { eq: "images/profile-pic.jpg" }) {
       childImageSharp {
-        resolutions(width: 500) {
-          ...GatsbyImageSharpResolutions_tracedSVG
+        sizes(maxWidth: 500) {
+          ...GatsbyImageSharpSizes_tracedSVG
           src
         }
       }
