@@ -3,6 +3,7 @@ title: "About"
 slug: "about"
 draft: false
 ---
+
 # Hi, I'm David Carter
 
 I am the Director of Technical Services at [Tribeswell](//tribeswell.com) in Bloomington, Indiana. My favorite part of going to work is developing complex websites and solving all of the creative problems that arise in the process. I also handle ongoing maintenance like plugin updates and adding new features to sites, among other responsibilities. At home, I keep up with the latest trends by trying out all of the different JS frameworks and static site generators, continually learning from online courses such as those from [Wes Bos](//wesbos.com/courses/) and [Egghead](//egghead.io), and reading the latest articles on [/r/webdev](//reddit.com/r/webdev) and twitter for example.
@@ -14,37 +15,43 @@ I'm probably a little too obsessed with the Denver Broncos. I have nearly every 
 ## Education
 
 ### Master of Science in Mathematics
+
 **[Northern Illinois University](//www.math.niu.edu/programs/grad/overview.html)**
 <br />
-*Dekalb, IL*
+_Dekalb, IL_
 <br />
 Class of 2013
+
 ### Bachelor of Arts in Mathematics
+
 **[California State University, Northridge](//www.csun.edu/science-mathematics/mathematics/undergraduate-programs)**
 <br />
-*Northridge, CA*
+_Northridge, CA_
 <br />
 Class of 2011
 
 ## Experience
 
 ### Director of Technical Services
+
 **[Tribeswell](//www.tribeswell.com)**
 <br />
-*Bloomington, IN*
+_Bloomington, IN_
 <br />
 December 2014 - Present
 
 ### Front-End Development Intern
+
 **[Hanapin Marketing](//www.hanapinmarketing.com)**
 <br />
-*Bloomington, IN*
+_Bloomington, IN_
 <br />
 May 2014 - August 2014
 
 ### Mathematics Tutor
+
 **[Campus Tutoring Services](//campusts.com)**
 <br />
-*Bloomington, IN*
+_Bloomington, IN_
 <br />
 August 2013 - May 2015
