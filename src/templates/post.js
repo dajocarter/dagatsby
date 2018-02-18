@@ -4,6 +4,7 @@ import Content from "../components/styled/Content";
 import MarkdownBody from "../components/styled/MarkdownBody";
 import rehypeReact from "rehype-react";
 import MarkdownVideo from "../components/markdown/video/MarkdownVideo";
+import HeroUnit from "../components/HeroUnit";
 
 const renderAst = new rehypeReact({
   createElement: React.createElement,
@@ -51,6 +52,9 @@ const Post = ({ data }) => (
       />
       <meta name="twitter:image" content={`${data.site.siteMetadata.url}`} />
     </Helmet>
+    <HeroUnit
+      sizes={data.markdownRemark.frontmatter.image.childImageSharp.sizes}
+    />
     <MarkdownBody>{renderAst(data.markdownRemark.htmlAst)}</MarkdownBody>
   </Content>
 );
@@ -74,6 +78,13 @@ export const postQuery = graphql`
         slug
         date(formatString: "MMMM D, YYYY")
         description
+        image {
+          childImageSharp {
+            sizes {
+              ...GatsbyImageSharpSizes_noBase64
+            }
+          }
+        }
       }
     }
   }
