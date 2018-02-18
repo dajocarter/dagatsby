@@ -99,7 +99,8 @@ const Index = ({ data }) => (
       />
     </Helmet>
     <HeroUnit
-      img={data.heroImg.childImageSharp.sizes}
+      sizes={data.heroImg.childImageSharp.sizes}
+      alt={``}
       headline={`David Carter`}
       blurb={`Expert in Custom WordPress Development`}
     />
