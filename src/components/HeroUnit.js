@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import styled from "styled-components";
 import Img from "gatsby-image";
 
@@ -62,6 +63,26 @@ const HeroUnit = props => {
       )}
     </UnitContainer>
   );
+};
+
+HeroUnit.propTypes = {
+  sizes: (props, propName, componentName) => {
+    if (!props.sizes && !props.resolutions) {
+      return new Error(
+        `One of props 'sizes' or 'resolutions' was not specified in '${componentName}'.`
+      );
+    }
+  },
+  resolutions: (props, propName, componentName) => {
+    if (!props.resolutions && !props.sizes) {
+      return new Error(
+        `One of props 'resolutions' or 'sizes' was not specified in '${componentName}'.`
+      );
+    }
+  },
+  alt: PropTypes.string,
+  headline: PropTypes.string,
+  blurb: PropTypes.string
 };
 
 export default HeroUnit;
