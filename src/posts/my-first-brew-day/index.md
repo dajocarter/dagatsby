@@ -12,6 +12,10 @@ tags:
   - "Single Hop IPA"
 ---
 
+# My First Brew Day
+
+July 3, 2017
+
 There's a little place in hell for people like those who run mega corporations like AB-InBev. I like my American underdog story so I choose to only drink fully independent craft beer. I've been doing this for a few years now so I decided it was time to try this myself. I rounded up all the supplies I needed from a local homebrew store and went to work this holiday weekend. I went with a recipe aimed at duplicating Bell's Two-Hearted IPA since it's readily available here, I drink it a lot (mainly because it's one of the cheapest beers when it's on sale), and I have something to compare my results with. I don't expect it to taste similar, but hopefully it turns out to be drinkable. What follows is my next-day recollection of the process.
 
 ## Cleaning and Sanitization
