@@ -17,7 +17,7 @@ const Body = styled.div`
 const Main = styled.main`
   display: flex;
   flex-flow: row wrap;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-start;
   margin-top: 72px;
   @media (max-width: 576px) {
