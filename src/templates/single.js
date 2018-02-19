@@ -54,6 +54,9 @@ const Single = ({ data }) => (
     </Helmet>
     <HeroUnit
       sizes={data.markdownRemark.frontmatter.image.childImageSharp.sizes}
+      alt={``}
+      headline={data.markdownRemark.frontmatter.title}
+      blurb={data.markdownRemark.frontmatter.description}
     />
     <MarkdownBody>{renderAst(data.markdownRemark.htmlAst)}</MarkdownBody>
   </Content>
