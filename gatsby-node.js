@@ -4,8 +4,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
 
   return new Promise((resolve, reject) => {
     const pageTemplate = path.resolve("./src/templates/page.js");
-    const postTemplate = path.resolve("./src/templates/post.js");
-    const projectTemplate = path.resolve("./src/templates/project.js");
+    const singleTemplate = path.resolve("./src/templates/single.js");
 
     resolve(
       graphql(`
@@ -69,7 +68,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
           if (!node.frontmatter.draft) {
             createPage({
               path: `/posts/${node.frontmatter.slug}/`,
-              component: postTemplate,
+              component: singleTemplate,
               context: {
                 slug: node.frontmatter.slug
               }
@@ -81,7 +80,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
           if (!node.frontmatter.draft) {
             createPage({
               path: `/projects/${node.frontmatter.slug}/`,
-              component: projectTemplate,
+              component: singleTemplate,
               context: {
                 slug: node.frontmatter.slug
               }

@@ -11,7 +11,7 @@ const renderAst = new rehypeReact({
   components: { "markdown-video": MarkdownVideo }
 }).Compiler;
 
-const Post = ({ data }) => (
+const Single = ({ data }) => (
   <Content>
     <Helmet>
       {/* General Tags */}
@@ -59,10 +59,10 @@ const Post = ({ data }) => (
   </Content>
 );
 
-export default Post;
+export default Single;
 
-export const postQuery = graphql`
-  query BlogPostBySlug($slug: String!) {
+export const singleQuery = graphql`
+  query SingleBySlug($slug: String!) {
     site {
       siteMetadata {
         title
