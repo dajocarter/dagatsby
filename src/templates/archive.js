@@ -1,23 +1,23 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Content from "../components/styled/Content";
 import ListItem from "../components/ListItem";
 import styled from "styled-components";
 
-const List = styled.div`
-  padding: 0 1rem 2rem;
-`;
-
 const PageTitle = styled.h1`
   color: #c8c8c8;
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 const Archive = props => (
-  <List>
+  <Content>
     <PageTitle>{props.title}</PageTitle>
     {props.items.map(({ node }, index) => (
       <ListItem key={index} node={node} prefix={props.prefix} />
     ))}
-  </List>
+  </Content>
 );
 
 Archive.propTypes = {
