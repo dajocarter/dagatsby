@@ -9,6 +9,17 @@ const UnitContainer = styled.div`
 
 const HeroImg = styled(Img)``;
 
+const Overlay = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  opacity: 0.5;
+  z-index: 10;
+`;
+
 const HeroContent = styled.div`
   display: flex;
   flex-flow: column nowrap;
@@ -21,6 +32,7 @@ const HeroContent = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 20;
 `;
 
 const Headline = styled.h1`
@@ -49,6 +61,7 @@ const Blurb = styled.p`
 const HeroUnit = props => {
   return (
     <UnitContainer>
+      <Overlay />
       {props.sizes ? (
         <HeroImg sizes={props.sizes} alt={props.alt} />
       ) : (
