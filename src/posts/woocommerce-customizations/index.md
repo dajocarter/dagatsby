@@ -1,5 +1,5 @@
 ---
-title: "WooCommerce Customizations"
+title: "Woocommerce Customizations"
 slug: "woocommerce-customizations"
 date: "2017-06-24T13:50:46+02:00"
 description: "A compilation of customizations I have had to make to WooCommerce installations."
@@ -11,6 +11,10 @@ tags:
   - "WordPress"
   - "WooCommerce"
 ---
+
+# Woocommerce Customizations
+
+June 24, 2017
 
 WooCommerce is the go-to solution for e-commerce on the WordPress platform. I just wanted to compile a list of customizations I have made during development. Some are more routine than others.
 

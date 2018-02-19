@@ -11,7 +11,9 @@ tags:
   - "Firebase"
 ---
 
-![Screenshots of Necter App and Desktop Website](./mobileAndDesktop.jpg)
+# Necter: Hybrid Mobile App
+
+Released July 14, 2015
 
 Necter is a hybrid app I built along with the accompanying website. As the sole
 developer on this project, I was responsible for every commit from the first to

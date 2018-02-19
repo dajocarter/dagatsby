@@ -12,11 +12,13 @@ tags:
   - "JavaScript"
 ---
 
-[![ReactForBeginners](./facebook-share.png)](https://reactforbeginners.com)
+# What I Learned from React for Beginners
 
-# Creating Components
+October 3, 2017
 
-## Most Basic Component
+## Creating Components
+
+### The Most Basic Component
 
 * A basic component has a render method that returns a single JSX element.
 
@@ -39,7 +41,7 @@ class ComponentName extends React.Component({
 export default ComponentName;
 ```
 
-## Stateless Functional Component
+### Stateless Functional Component
 
 * If a component does not depend on the state of the app, it can be written as a function of its props rather than a class.
 
@@ -58,7 +60,7 @@ const Header = props => {
 export default Header;
 ```
 
-## Nested Components
+### Nested Components
 
 * A capitalized JSX tag refers to a React component.
 * Pass date down from parent containers to child via props
@@ -98,14 +100,14 @@ class ChildComponent extends React.Component({
 export default ChildComponent;
 ```
 
-# State Handling
+## State Handling
 
-## Set Initial State
+### Set Initial State
 
-## Update State
+### Update State
 
-# Event Handling
+## Event Handling
 
-## Click Event
+### Click Event
 
-## Form Submission
+### Form Submission
