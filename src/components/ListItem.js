@@ -63,7 +63,7 @@ const ListItem = props => {
       <GridCol>
         <ItemContent>
           <ItemTitle>
-            <ItemLink to={`/posts/${props.node.frontmatter.slug}/`}>
+            <ItemLink to={`/${props.prefix}/${props.node.frontmatter.slug}/`}>
               {props.node.frontmatter.title}
             </ItemLink>
           </ItemTitle>

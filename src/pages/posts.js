@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import Archive from "../templates/archive";
 
 const Posts = ({ data }) => (
-  <Archive title={`All Posts`} items={data.posts.edges} />
+  <Archive title={`All Posts`} items={data.posts.edges} prefix={`posts`} />
 );
 
 Posts.propTypes = {

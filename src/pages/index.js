@@ -103,13 +103,13 @@ const Index = ({ data }) => (
     />
     <PostList>
       {data.posts.edges.map(({ node }, index) => (
-        <ListItem key={index} node={node} />
+        <ListItem key={index} node={node} prefix={`posts`} />
       ))}
       <PostsLink to={`/posts/`}>View All Posts</PostsLink>
     </PostList>
     <ProjectList>
       {data.projects.edges.map(({ node }, index) => (
-        <ListItem key={index} node={node} />
+        <ListItem key={index} node={node} prefix={`projects`} />
       ))}
       <ProjectsLink to={`/projects/`}>View All Projects</ProjectsLink>
     </ProjectList>

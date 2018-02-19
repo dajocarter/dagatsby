@@ -14,7 +14,9 @@ const PageTitle = styled.h1`
 const Archive = props => (
   <List>
     <PageTitle>{props.title}</PageTitle>
-    {props.items.map(({ node }, index) => <ListItem key={index} node={node} />)}
+    {props.items.map(({ node }, index) => (
+      <ListItem key={index} node={node} prefix={props.prefix} />
+    ))}
   </List>
 );
 

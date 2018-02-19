@@ -3,7 +3,11 @@ import PropTypes from "prop-types";
 import Archive from "../templates/archive";
 
 const Projects = ({ data }) => (
-  <Archive title={`All Projects`} items={data.projects.edges} />
+  <Archive
+    title={`All Projects`}
+    items={data.projects.edges}
+    prefix={`projects`}
+  />
 );
 
 Projects.propTypes = {
