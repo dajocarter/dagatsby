@@ -8,6 +8,7 @@ import MailIcon from "react-icons/lib/fa/envelope";
 import GithubIcon from "react-icons/lib/fa/github-alt";
 
 const FooterContainer = styled.footer`
+  background-color: #1d1e18;
   border-top: 2px solid #c8c8c8;
   display: flex;
   flex-flow: row wrap;
