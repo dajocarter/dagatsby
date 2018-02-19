@@ -6,11 +6,11 @@ import styled from "styled-components";
 require("prismjs/themes/prism-twilight.css");
 
 const Body = styled.div`
-  background: #1d1e18;
-  color: #cfd2da;
+  background: #31322d;
+  color: #c8c8c8;
 
   blockquote {
-    color: #cfd2da;
+    color: #c8c8c8;
   }
 `;
 

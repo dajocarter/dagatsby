@@ -14,9 +14,7 @@ const List = styled.div`
   padding: 2rem 1rem;
 `;
 
-const PostList = List.extend`
-  background: #31322d;
-`;
+const PostList = List.extend``;
 
 const ProjectList = List.extend`
   background: #464642;
@@ -44,7 +42,6 @@ const PostsLink = ArchiveLink.extend``;
 const ProjectsLink = ArchiveLink.extend``;
 
 const AboutMe = styled(Grid)`
-  background: #31322d;
   padding: 2rem 1rem;
   align-items: center;
 `;

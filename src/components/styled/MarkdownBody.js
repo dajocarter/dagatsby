@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 const ArticleStyles = styled.div`
+  padding: 0 2rem;
+
   h1,
   h2,
   h3,
@@ -21,8 +23,7 @@ const ArticleStyles = styled.div`
   a {
     text-shadow: none;
     background-image: none;
-    color: #1997c6;
-
+    color: #fe7f2d;
     &:hover {
       color: #e71d36;
       text-decoration: underline;
