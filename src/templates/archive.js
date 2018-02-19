@@ -25,13 +25,3 @@ Archive.propTypes = {
 };
 
 export default Archive;
-
-export const archiveQuery = graphql`
-  query ArchiveQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`;
