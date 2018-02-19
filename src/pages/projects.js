@@ -3,11 +3,7 @@ import PropTypes from "prop-types";
 import Archive from "../templates/archive";
 
 const Projects = ({ data }) => (
-  <Archive
-    list={data.allMarkdownRemark.edges}
-    title={`Projects | ${data.site.siteMetadata.title}`}
-    prefix={`projects`}
-  />
+  <Archive title={`All Projects`} items={data.projects.edges} />
 );
 
 Projects.propTypes = {
@@ -23,8 +19,11 @@ export const projectsQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(
-      filter: { fileAbsolutePath: { glob: "/**/*/src/projects/**/*.md" } }
+    projects: allMarkdownRemark(
+      filter: {
+        fileAbsolutePath: { glob: "/**/*/src/projects/**/*.md" }
+        frontmatter: { draft: { eq: false } }
+      }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
       edges {
@@ -33,10 +32,15 @@ export const projectsQuery = graphql`
           frontmatter {
             slug
             date(formatString: "MMMM D, YYYY")
-            draft
+            image {
+              childImageSharp {
+                sizes(maxWidth: 660) {
+                  ...GatsbyImageSharpSizes_tracedSVG
+                }
+              }
+            }
             title
             tags
-            links
           }
         }
       }
