@@ -40,7 +40,7 @@ const Hr = styled.hr`
   box-shadow: 1px 1px 1px #000;
 `;
 
-const Blurb = styled.h2`
+const Blurb = styled.p`
   margin: 0;
   text-shadow: 1px 1px 1px #000;
   color: #fff;
