@@ -26,16 +26,24 @@ const ArchiveLink = styled(Anchor)``;
 const AboutMe = styled(Grid)`
   padding: 2rem 1rem;
   align-items: center;
+  text-align: center;
 `;
 
 const Description = styled.p`
   margin: 0;
+  text-align: left;
   @media (min-width: 768px) {
     padding-left: 1rem;
   }
 `;
 
 const ProfilePic = styled(Img)``;
+
+const ResumeLink = styled(Anchor)`
+  @media (min-width: 768px) {
+    margin-top: 1rem;
+  }
+`;
 
 const Index = ({ data }) => (
   <Content>
@@ -100,14 +108,14 @@ const Index = ({ data }) => (
       </ArchiveLink>
     </ProjectList>
     <AboutMe responsiveMd>
-      <GridCol>
+      <GridCol column={50}>
         <ProfilePic
           sizes={data.profileImg.childImageSharp.sizes}
           alt={`David Carter`}
           title={`David Carter`}
         />
       </GridCol>
-      <GridCol>
+      <GridCol column={50}>
         <Description>
           I am the Director of Technical Services at Tribeswell in Bloomington,
           Indiana. My favorite part of going to work is developing complex
@@ -115,6 +123,24 @@ const Index = ({ data }) => (
           process. I also handle ongoing maintenance like plugin updates and
           adding new features to sites, among other responsibilities.
         </Description>
+      </GridCol>
+      <GridCol column={50}>
+        <ResumeLink
+          className={`button`}
+          to={data.resume.publicURL}
+          target={`_blank`}
+        >
+          Download Relevant Résumé
+        </ResumeLink>
+      </GridCol>
+      <GridCol column={50}>
+        <ResumeLink
+          className={`button`}
+          to={data.cv.publicURL}
+          target={`_blank`}
+        >
+          Download Complete Résumé
+        </ResumeLink>
       </GridCol>
     </AboutMe>
   </Content>
@@ -134,6 +160,12 @@ export const pageQuery = graphql`
         description
         url
       }
+    }
+    resume: file(relativePath: { eq: "David-Carter-Resume.pdf" }) {
+      publicURL
+    }
+    cv: file(relativePath: { eq: "David-Carter-Curriculum-Vitae.pdf" }) {
+      publicURL
     }
     heroImg: file(
       relativePath: { eq: "sasha-instagram-com-sanfrancisco-320885.jpg" }
