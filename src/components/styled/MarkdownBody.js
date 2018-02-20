@@ -2,7 +2,11 @@ import React from "react";
 import styled from "styled-components";
 
 const ArticleStyles = styled.div`
-  padding: 0 2rem;
+  padding: 1rem;
+  width: 100%;
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
 
   h1,
   h2,

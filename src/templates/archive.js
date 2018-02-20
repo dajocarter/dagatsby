@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Content from "../components/styled/Content";
+import Article from "../components/styled/MarkdownBody";
 import ListItem from "../components/ListItem";
 import styled from "styled-components";
 
@@ -13,10 +14,12 @@ const PageTitle = styled.h1`
 
 const Archive = props => (
   <Content>
-    <PageTitle>{props.title}</PageTitle>
-    {props.items.map(({ node }, index) => (
-      <ListItem key={index} node={node} prefix={props.prefix} />
-    ))}
+    <Article>
+      <PageTitle>{props.title}</PageTitle>
+      {props.items.map(({ node }, index) => (
+        <ListItem key={index} node={node} prefix={props.prefix} />
+      ))}
+    </Article>
   </Content>
 );
 
