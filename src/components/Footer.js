@@ -16,7 +16,7 @@ const FooterContainer = styled.footer`
   align-items: center;
   padding: 1rem;
 
-  @media (max-width: 394px) {
+  @media (max-width: 488px) {
     justify-content: center;
   }
 `;
@@ -24,7 +24,7 @@ const FooterContainer = styled.footer`
 const Copyright = styled.p`
   flex: 0 0 auto;
   margin: 0;
-  @media (max-width: 394px) {
+  @media (max-width: 488px) {
     margin-top: 1rem;
     order: 2;
   }
@@ -68,7 +68,7 @@ const IconLink = styled.span`
 const Footer = () => {
   return (
     <FooterContainer>
-      <Copyright>&copy; dajocarter</Copyright>
+      <Copyright>&copy; 2017 David Carter</Copyright>
       <IconGroup>
         <IconLink backgroundColor={`#000`} color={`#fff`}>
           <Anchor
