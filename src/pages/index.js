@@ -12,6 +12,7 @@ import { Grid, GridCol } from "griz";
 
 const List = styled.div`
   padding: 2rem 1rem;
+  text-align: center;
 `;
 
 const PostList = List.extend``;
@@ -20,26 +21,7 @@ const ProjectList = List.extend`
   background: #464642;
 `;
 
-const ArchiveLink = styled(Anchor)`
-  background: transparent;
-  border: 1px solid #c8c8c8;
-  border-radius: 4px;
-  padding: 0.5rem 1rem;
-  color: #fe7f2d;
-  display: block;
-  width: 200px;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  &:hover {
-    background: #1d1e18;
-    color: #e71d36;
-  }
-`;
-
-const PostsLink = ArchiveLink.extend``;
-
-const ProjectsLink = ArchiveLink.extend``;
+const ArchiveLink = styled(Anchor)``;
 
 const AboutMe = styled(Grid)`
   padding: 2rem 1rem;
@@ -105,13 +87,17 @@ const Index = ({ data }) => (
       {data.posts.edges.map(({ node }, index) => (
         <ListItem key={index} node={node} prefix={`posts`} />
       ))}
-      <PostsLink to={`/posts/`}>View All Posts</PostsLink>
+      <ArchiveLink className={`button`} to={`/posts/`}>
+        View All Posts
+      </ArchiveLink>
     </PostList>
     <ProjectList>
       {data.projects.edges.map(({ node }, index) => (
         <ListItem key={index} node={node} prefix={`projects`} />
       ))}
-      <ProjectsLink to={`/projects/`}>View All Projects</ProjectsLink>
+      <ArchiveLink className={`button`} to={`/projects/`}>
+        View All Projects
+      </ArchiveLink>
     </ProjectList>
     <AboutMe responsiveMd>
       <GridCol>
