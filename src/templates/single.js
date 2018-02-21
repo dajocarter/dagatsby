@@ -15,50 +15,41 @@ const Single = ({ data }) => (
   <Content>
     <Helmet>
       {/* General Tags */}
-      <title>{`${data.markdownRemark.frontmatter.title} | ${
+      <title>{`${data.page.frontmatter.title} | ${
         data.site.siteMetadata.title
       }`}</title>
-      <meta
-        name="description"
-        content={data.markdownRemark.frontmatter.description}
-      />
+      <meta name="description" content={data.page.frontmatter.description} />
       <meta name="image" content={`${data.site.siteMetadata.url}`} />
       {/* Facebook Tags */}
-      <meta
-        property="og:title"
-        content={data.markdownRemark.frontmatter.title}
-      />
+      <meta property="og:title" content={data.page.frontmatter.title} />
       <meta
         property="og:url"
         content={`${data.site.siteMetadata.url}/posts/${
-          data.markdownRemark.frontmatter.slug
+          data.page.frontmatter.slug
         }`}
       />
       <meta
         property="og:description"
-        content={data.markdownRemark.frontmatter.description}
+        content={data.page.frontmatter.description}
       />
       <meta property="og:image" content={`${data.site.siteMetadata.url}`} />
       {/* Twitter Tags */}
-      <meta
-        name="twitter:title"
-        content={data.markdownRemark.frontmatter.title}
-      />
+      <meta name="twitter:title" content={data.page.frontmatter.title} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:creator" content="@dajocarter" />
       <meta
         name="twitter:description"
-        content={data.markdownRemark.frontmatter.description}
+        content={data.page.frontmatter.description}
       />
       <meta name="twitter:image" content={`${data.site.siteMetadata.url}`} />
     </Helmet>
     <HeroUnit
-      sizes={data.markdownRemark.frontmatter.image.childImageSharp.sizes}
+      sizes={data.page.frontmatter.image.childImageSharp.sizes}
       alt={``}
-      headline={data.markdownRemark.frontmatter.title}
-      blurb={data.markdownRemark.frontmatter.description}
+      headline={data.page.frontmatter.title}
+      blurb={data.page.frontmatter.description}
     />
-    <MarkdownBody>{renderAst(data.markdownRemark.htmlAst)}</MarkdownBody>
+    <MarkdownBody>{renderAst(data.page.htmlAst)}</MarkdownBody>
   </Content>
 );
 
@@ -73,7 +64,7 @@ export const singleQuery = graphql`
         url
       }
     }
-    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
+    page: markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       id
       htmlAst
       frontmatter {
