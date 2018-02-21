@@ -13,14 +13,12 @@ const PageTitle = styled.h1`
 `;
 
 const Archive = props => (
-  <Content>
-    <Article>
-      <PageTitle>{props.title}</PageTitle>
-      {props.items.map(({ node }, index) => (
-        <ListItem key={index} node={node} prefix={props.prefix} />
-      ))}
-    </Article>
-  </Content>
+  <Article>
+    <PageTitle>{props.title}</PageTitle>
+    {props.items.map(({ node }, index) => (
+      <ListItem key={index} node={node} prefix={props.prefix} />
+    ))}
+  </Article>
 );
 
 Archive.propTypes = {

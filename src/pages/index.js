@@ -49,7 +49,9 @@ const Index = ({ data }) => (
   <Content>
     <Helmet>
       {/* General Tags */}
-      <title>{data.site.siteMetadata.title}</title>
+      <title>{`${data.site.siteMetadata.title} | ${
+        data.site.siteMetadata.tagline
+      }`}</title>
       <meta name="description" content={data.site.siteMetadata.description} />
       <meta
         name="image"
@@ -58,8 +60,21 @@ const Index = ({ data }) => (
         }`}
       />
       {/* Facebook Tags */}
-      <meta property="og:title" content={data.site.siteMetadata.title} />
+      <meta property="og:locale" content="en_us" />
+      <meta
+        property="og:title"
+        content={`${data.site.siteMetadata.title} | ${
+          data.site.siteMetadata.tagline
+        }`}
+      />
       <meta property="og:url" content={data.site.siteMetadata.url} />
+      <meta
+        property="og:site_name"
+        content={`${data.site.siteMetadata.title} | ${
+          data.site.siteMetadata.tagline
+        }`}
+      />
+      <meta property="og:type" content="website" />
       <meta
         property="og:description"
         content={data.site.siteMetadata.description}
@@ -71,15 +86,22 @@ const Index = ({ data }) => (
         }`}
       />
       {/* Twitter Tags */}
-      <meta name="twitter:title" content={data.site.siteMetadata.title} />
-      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:site" content="@dajocarter" />
       <meta name="twitter:creator" content="@dajocarter" />
+      <meta name="twitter:url" content={data.site.siteMetadata.url} />
+      <meta
+        name="twitter:title"
+        content={`${data.site.siteMetadata.title} | ${
+          data.site.siteMetadata.tagline
+        }`}
+      />
       <meta
         name="twitter:description"
         content={data.site.siteMetadata.description}
       />
       <meta
-        name="twitter:image"
+        name="twitter:image:src"
         content={`${data.site.siteMetadata.url}${
           data.profileImg.childImageSharp.sizes.src
         }`}
@@ -157,6 +179,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        tagline
         description
         url
       }

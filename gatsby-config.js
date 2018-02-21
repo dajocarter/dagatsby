@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: "David Carter | Web Developer",
-    author: "David Carter",
+    title: "David Carter",
+    tagline: "Expert in Custom WordPress Development",
     description:
       "Hi, my name's David Carter and I'm a web developer specializing in custom WordPress development. I'm passionate about learning and motivated to solve problems efficiently.",
     url: "https://www.dajocarter.com"
