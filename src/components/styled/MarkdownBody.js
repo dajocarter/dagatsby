@@ -65,6 +65,10 @@ const ArticleStyles = styled.div`
 
   video {
     width: 100%;
+    max-width: 728px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
   }
 `;
 
