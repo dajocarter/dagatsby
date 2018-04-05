@@ -5,9 +5,33 @@ import Img from "gatsby-image";
 
 const UnitContainer = styled.div`
   position: relative;
+  height: 500px;
 `;
 
-const HeroImg = styled(Img)``;
+const Overlay = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  height: 500px;
+  background: rgba(0, 0, 0, 0.3);
+`;
+
+const HeroImg = styled(Img)`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  height: 500px;
+
+  & > img {
+    object-fit: cover !important; // or whatever
+    object-position: 50% 50% !important; // or whatever
+    font-family: "object-fit: cover !important; object-position: 0% 0% !important;"; // needed for IE9+ polyfill
+  }
+`;
 
 const HeroContent = styled.div`
   display: flex;
@@ -50,6 +74,7 @@ const Blurb = styled.p`
 const HeroUnit = props => {
   return (
     <UnitContainer>
+      <Overlay />
       {props.sizes ? (
         <HeroImg sizes={props.sizes} alt={props.alt} />
       ) : (
