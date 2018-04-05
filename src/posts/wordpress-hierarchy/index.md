@@ -23,7 +23,7 @@ Before I get started with some explanations of the templates, let me declare som
 
 **Taxonomy** is a way to classify post types. Again, WordPress comes with two default taxonomies in categories and tags. For the most part, this will be all you need, although you can create custom taxonomies. For instance, if you have a custom post type of employees, then you can create a custom taxonomy of departments to classify them. The main difference I've found between categories and tags is that categories can be hierarchical while tags cannot. Because of that fact, they also have two different UIs for adding them to posts.
 
-With that out of the way, we can now get on to describe the templates that come with Scratch.
+With that out of the way, we can now get on to describe some of the common templates used in WordPress.
 
 **archive.php** is used on pages where you're listing things. Usually custom post types, but also taxonomies. This is basically like the Blog page for posts, although it's not used for that (more on that later).
 
