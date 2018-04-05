@@ -34,7 +34,9 @@ const ItemContent = styled.div`
 `;
 
 const ItemTitle = styled.h2`
-  margin-top: 0;
+  && {
+    margin-top: 0;
+  }
 `;
 
 const ItemDate = styled.p`
