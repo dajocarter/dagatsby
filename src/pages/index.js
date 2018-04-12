@@ -37,7 +37,12 @@ const Description = styled.p`
   }
 `;
 
-const ProfilePic = styled(Img)``;
+const ProfilePic = styled(Img)`
+  border-radius: 50%;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+`;
 
 const ResumeLink = styled(Anchor)`
   @media (min-width: 768px) {
@@ -176,9 +181,9 @@ export const pageQuery = graphql`
         }
       }
     }
-    profileImg: file(relativePath: { eq: "profile-pic.jpg" }) {
+    profileImg: file(relativePath: { eq: "profile-pic.png" }) {
       childImageSharp {
-        sizes(maxWidth: 500) {
+        sizes(maxWidth: 300) {
           ...GatsbyImageSharpSizes_tracedSVG
           src
         }
