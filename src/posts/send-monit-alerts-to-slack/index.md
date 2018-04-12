@@ -13,10 +13,6 @@ tags:
   - "Slack"
 ---
 
-# Send Monit Alerts to Slack
-
-June 25, 2017
-
 ## Installing Monit
 
 This is as easy as `sudo apt-get install monit`. Just a heads-up to ServerPilot users, you'll have to SSH in to your server as `root` or another user with root/sudo priviledges. If you do SSH in as root, you can leave off all of the `sudo`s.

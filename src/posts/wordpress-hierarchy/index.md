@@ -11,10 +11,6 @@ tags:
   - "WordPress"
 ---
 
-# WordPress Hierarchy
-
-April 4, 2018
-
 One of the first things you need to understand as you start working with WordPress is the [template heirarchy](https://developer.wordpress.org/themes/basics/template-hierarchy/) because you need to know which file to edit when you're working on a page. For a good visualization, check out [WP Hierarchy](https://wphierarchy.com/).
 
 Before I get started with some explanations of the templates, let me declare some definitions so that everything below makes sense.

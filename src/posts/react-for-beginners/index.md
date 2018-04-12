@@ -12,10 +12,6 @@ tags:
   - "JavaScript"
 ---
 
-# What I Learned from React for Beginners
-
-October 3, 2017
-
 ## Creating Components
 
 ### The Most Basic Component

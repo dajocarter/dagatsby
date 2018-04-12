@@ -12,10 +12,6 @@ tags:
   - "WordPress"
 ---
 
-# Using AJAX in WordPress
-
-February 24, 2018
-
 ## Getting your theme ready for AJAX
 
 The first thing you'll need to do is enqueue your javascript file. Open up `functions.php` and add the following if it's not already there.

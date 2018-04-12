@@ -12,10 +12,6 @@ tags:
   - "WooCommerce"
 ---
 
-# Woocommerce Customizations
-
-June 24, 2017
-
 WooCommerce is the go-to solution for e-commerce on the WordPress platform. I just wanted to compile a list of customizations I have made during development. Some are more routine than others.
 
 ## Declare Theme Support

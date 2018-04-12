@@ -13,10 +13,6 @@ tags:
   - "WP REST API"
 ---
 
-# Buskirk-Chumley Theatre & The BCT Box Office
-
-Launched December 16, 2016
-
 The Buskirk-Chumley Theatre is a historical landmark of Bloomington, Indiana so it was a great honor when they came to us to rebuild their sites. The main issue they had at the time was having to duplicate the same information on both sites as well as difficulty in entering information. I was able to cure their problem of cumbersome data-entry by utilizing ACF Pro. Creating custom endpoints through the WP REST API solved their dilemma of having to enter the same information twice for both websites.
 
 ![BCT Box Office Event Calendar](./bct-boxoffice-event-calendar.png)

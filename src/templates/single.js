@@ -1,8 +1,9 @@
 import React from "react";
 import Helmet from "react-helmet";
+import rehypeReact from "rehype-react";
+import styled from "styled-components";
 import Content from "../components/styled/Content";
 import MarkdownBody from "../components/styled/MarkdownBody";
-import rehypeReact from "rehype-react";
 import MarkdownVideo from "../components/markdown/video/MarkdownVideo";
 import HeroUnit from "../components/HeroUnit";
 
@@ -10,6 +11,24 @@ const renderAst = new rehypeReact({
   createElement: React.createElement,
   components: { "markdown-video": MarkdownVideo }
 }).Compiler;
+
+const SingleInfo = styled.div`
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+`;
+
+const SingleTitle = styled.h1`
+  border-bottom: 1px solid #fff;
+  margin: 2rem 0 1rem;
+  padding-bottom: 0.5rem;
+  color: #cfd2da;
+`;
+
+const SingleDate = styled.p`
+  margin-bottom: 0;
+`;
 
 const Single = ({ data }) => (
   <Content>
@@ -49,6 +68,15 @@ const Single = ({ data }) => (
       headline={data.page.frontmatter.title}
       blurb={data.page.frontmatter.description}
     />
+    <SingleInfo>
+      <SingleTitle>{data.page.frontmatter.title}</SingleTitle>
+      <SingleDate>
+        {data.page.fileAbsolutePath.includes(`projects`)
+          ? `Released`
+          : `Posted`}{" "}
+        {data.page.frontmatter.date}
+      </SingleDate>
+    </SingleInfo>
     <MarkdownBody>{renderAst(data.page.htmlAst)}</MarkdownBody>
   </Content>
 );
@@ -67,6 +95,7 @@ export const singleQuery = graphql`
     page: markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       id
       htmlAst
+      fileAbsolutePath
       frontmatter {
         title
         slug
