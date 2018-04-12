@@ -28,7 +28,7 @@ export const postsQuery = graphql`
     ) {
       edges {
         node {
-          excerpt
+          excerpt(pruneLength: 280)
           frontmatter {
             slug
             date(formatString: "MMMM D, YYYY")
