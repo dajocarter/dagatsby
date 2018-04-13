@@ -6,7 +6,7 @@ draft: false
 
 # Hi, I'm David Carter
 
-I am the Director of Technical Services at [Tribeswell](//tribeswell.com) in Bloomington, Indiana. My favorite part of going to work is developing complex websites and solving all of the creative problems that arise in the process. I also handle ongoing maintenance like plugin updates and adding new features to sites, among other responsibilities. At home, I keep up with the latest trends by trying out all of the different JS frameworks and static site generators, continually learning from online courses such as those from [Wes Bos](//wesbos.com/courses/) and [Egghead](//egghead.io), and reading the latest articles on [/r/webdev](//reddit.com/r/webdev) and twitter for example.
+I am the Director of Technical Services at [Tribeswell](//tribeswell.com) in Bloomington, Indiana. My favorite part of going to work is developing complex websites and solving all of the creative problems that arise in the process. I also handle ongoing maintenance like plugin updates and adding new features to sites, among other responsibilities. Web development isn't only my career, but my favorite hobby. I love reading about ways to improve my code and trying new tools and frameworks as my goal is always to become a better developer. My current passion is using a headless WordPress instance as a backend and integrating it with a React frontend.
 
 When I'm not on my computer, you'll find me with my two favorite girls in the world, my life partner and [my dog](//instagram.com/piglet_petite). We all love going for long walks in the woods, but also just chilling on the couch with some Netflix and YouTube. The human duo of our trio enjoy bourbon and craft beer. This year, we finished the Bourbon Trail and I started brewing my own beer.
 
