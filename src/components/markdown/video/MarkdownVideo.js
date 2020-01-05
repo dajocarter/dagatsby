@@ -4,14 +4,15 @@ import BoilingWordPoster from "./boiling-wort.jpg";
 
 const MarkdownVideo = props => {
   const { src, ...attributes } = props;
-  let vidSrc, vidPoster;
+  let vidSrc = "", vidPoster = "";
   switch (src) {
     case "boiling-wort":
+    default:
       vidSrc = BoilingWortVid;
       vidPoster = BoilingWordPoster
       break;
   }
-  return <video src={vidSrc} poster={BoilingWordPoster} {...attributes} />
+  return <video src={vidSrc} poster={vidPoster} {...attributes} />
 };
 
 export default MarkdownVideo;
