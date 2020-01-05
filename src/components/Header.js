@@ -112,7 +112,7 @@ const MenuItemLink = styled(Anchor)`
 const Header = props => (
   <HeaderContainer home={props.home}>
     <HeaderBottomBorder />
-    <LogoLink exact activeClassName={`active`} to={`/`}>
+    <LogoLink activeClassName={`active`} to={`/`}>
       David Carter
     </LogoLink>
     <Nav>
