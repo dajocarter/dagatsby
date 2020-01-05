@@ -3,6 +3,7 @@ import { graphql } from "gatsby";
 import Helmet from "react-helmet";
 import rehypeReact from "rehype-react";
 import styled from "styled-components";
+import Layout from '../components/Layout'
 import Content from "../components/styled/Content";
 import MarkdownBody from "../components/styled/MarkdownBody";
 import MarkdownVideo from "../components/markdown/video/MarkdownVideo";
@@ -32,54 +33,56 @@ const SingleDate = styled.p`
 `;
 
 const Single = ({ data }) => (
-  <Content>
-    <Helmet>
-      {/* General Tags */}
-      <title>{`${data.page.frontmatter.title} | ${
-        data.site.siteMetadata.title
-      }`}</title>
-      <meta name="description" content={data.page.frontmatter.description} />
-      <meta name="image" content={`${data.site.siteMetadata.url}`} />
-      {/* Facebook Tags */}
-      <meta property="og:title" content={data.page.frontmatter.title} />
-      <meta
-        property="og:url"
-        content={`${data.site.siteMetadata.url}/posts/${
-          data.page.frontmatter.slug
-        }`}
+  <Layout>
+    <Content>
+      <Helmet>
+        {/* General Tags */}
+        <title>{`${data.page.frontmatter.title} | ${
+          data.site.siteMetadata.title
+          }`}</title>
+        <meta name="description" content={data.page.frontmatter.description} />
+        <meta name="image" content={`${data.site.siteMetadata.url}`} />
+        {/* Facebook Tags */}
+        <meta property="og:title" content={data.page.frontmatter.title} />
+        <meta
+          property="og:url"
+          content={`${data.site.siteMetadata.url}/posts/${
+            data.page.frontmatter.slug
+            }`}
+        />
+        <meta
+          property="og:description"
+          content={data.page.frontmatter.description}
+        />
+        <meta property="og:image" content={`${data.site.siteMetadata.url}`} />
+        {/* Twitter Tags */}
+        <meta name="twitter:title" content={data.page.frontmatter.title} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:creator" content="@dajocarter" />
+        <meta
+          name="twitter:description"
+          content={data.page.frontmatter.description}
+        />
+        <meta name="twitter:image" content={`${data.site.siteMetadata.url}`} />
+      </Helmet>
+      <HeroUnit
+        sizes={data.page.frontmatter.image.childImageSharp.sizes}
+        alt={``}
+        headline={data.page.frontmatter.title}
+        blurb={data.page.frontmatter.description}
       />
-      <meta
-        property="og:description"
-        content={data.page.frontmatter.description}
-      />
-      <meta property="og:image" content={`${data.site.siteMetadata.url}`} />
-      {/* Twitter Tags */}
-      <meta name="twitter:title" content={data.page.frontmatter.title} />
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:creator" content="@dajocarter" />
-      <meta
-        name="twitter:description"
-        content={data.page.frontmatter.description}
-      />
-      <meta name="twitter:image" content={`${data.site.siteMetadata.url}`} />
-    </Helmet>
-    <HeroUnit
-      sizes={data.page.frontmatter.image.childImageSharp.sizes}
-      alt={``}
-      headline={data.page.frontmatter.title}
-      blurb={data.page.frontmatter.description}
-    />
-    <SingleInfo>
-      <SingleTitle>{data.page.frontmatter.title}</SingleTitle>
-      <SingleDate>
-        {data.page.fileAbsolutePath.includes(`projects`)
-          ? `Released`
-          : `Posted`}{" "}
-        {data.page.frontmatter.date}
-      </SingleDate>
-    </SingleInfo>
-    <MarkdownBody>{renderAst(data.page.htmlAst)}</MarkdownBody>
-  </Content>
+      <SingleInfo>
+        <SingleTitle>{data.page.frontmatter.title}</SingleTitle>
+        <SingleDate>
+          {data.page.fileAbsolutePath.includes(`projects`)
+            ? `Released`
+            : `Posted`}{" "}
+          {data.page.frontmatter.date}
+        </SingleDate>
+      </SingleInfo>
+      <MarkdownBody>{renderAst(data.page.htmlAst)}</MarkdownBody>
+    </Content>
+  </Layout>
 );
 
 export default Single;

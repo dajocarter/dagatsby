@@ -1,7 +1,6 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import Layout from "../components/Layout";
-import Archive from "../templates/archive";
+import ArchiveTemplate from "../templates/archive";
 
 const Posts = () => {
   const data = useStaticQuery(graphql`
@@ -40,9 +39,7 @@ const Posts = () => {
     }
   `)
   return (
-    <Layout>
-      <Archive title={`All Posts`} items={data.posts.edges} prefix={`posts`} />
-    </Layout>
+    <ArchiveTemplate title={`All Posts`} items={data.posts.edges} prefix={`posts`} />
   )
 };
 
