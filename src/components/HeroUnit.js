@@ -13,7 +13,7 @@ const Overlay = styled.div`
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 100;
   height: 500px;
   background: rgba(0, 0, 0, 0.3);
 `;
@@ -23,7 +23,7 @@ const HeroImg = styled(Img)`
   top: 0;
   left: 0;
   width: 100%;
-  z-index: -1;
+  z-index: 10;
   height: 500px;
 
   & > img {
