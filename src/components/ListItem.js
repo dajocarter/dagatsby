@@ -58,9 +58,7 @@ const ListItem = props => {
       {props.node.frontmatter.image && (
         <GridCol>
           <ItemImg
-            fixed={
-              props.node.frontmatter.image.childImageSharp.fixed
-            }
+            fixed={props.node.frontmatter.image.childImageSharp.fixed}
             fluid={props.node.frontmatter.image.childImageSharp.fluid}
           />
         </GridCol>

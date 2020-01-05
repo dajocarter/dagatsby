@@ -138,19 +138,20 @@ const Index = () => {
         }
       }
     }
-  `)
+  `);
   return (
     <Layout>
       <Content>
         <Helmet>
           {/* General Tags */}
           <title>{data.site.siteMetadata.title}</title>
-          <meta name="description" content={data.site.siteMetadata.description} />
+          <meta
+            name="description"
+            content={data.site.siteMetadata.description}
+          />
           <meta
             name="image"
-            content={`${data.site.siteMetadata.url}${
-              data.profileImg.childImageSharp.fluid.src
-              }`}
+            content={`${data.site.siteMetadata.url}${data.profileImg.childImageSharp.fluid.src}`}
           />
           {/* Facebook Tags */}
           <meta property="og:title" content={data.site.siteMetadata.title} />
@@ -161,9 +162,7 @@ const Index = () => {
           />
           <meta
             property="og:image"
-            content={`${data.site.siteMetadata.url}${
-              data.profileImg.childImageSharp.fluid.src
-              }`}
+            content={`${data.site.siteMetadata.url}${data.profileImg.childImageSharp.fluid.src}`}
           />
           {/* Twitter Tags */}
           <meta name="twitter:title" content={data.site.siteMetadata.title} />
@@ -175,9 +174,7 @@ const Index = () => {
           />
           <meta
             name="twitter:image"
-            content={`${data.site.siteMetadata.url}${
-              data.profileImg.childImageSharp.fluid.src
-              }`}
+            content={`${data.site.siteMetadata.url}${data.profileImg.childImageSharp.fluid.src}`}
           />
         </Helmet>
         <HeroUnit
@@ -192,7 +189,7 @@ const Index = () => {
           ))}
           <ArchiveLink className={`button`} to={`/posts/`}>
             View All Posts
-      </ArchiveLink>
+          </ArchiveLink>
         </PostList>
         <ProjectList>
           {data.projects.edges.map(({ node }, index) => (
@@ -200,7 +197,7 @@ const Index = () => {
           ))}
           <ArchiveLink className={`button`} to={`/projects/`}>
             View All Projects
-      </ArchiveLink>
+          </ArchiveLink>
         </ProjectList>
         <AboutMe responsiveMd>
           <GridCol column={50}>
@@ -212,12 +209,13 @@ const Index = () => {
           </GridCol>
           <GridCol column={50}>
             <Description>
-              I am the Director of Technical Services at Tribeswell in Bloomington,
-              Indiana. My favorite part of going to work is developing complex
-              websites and solving all of the creative problems that arise in the
-              process. I also handle ongoing maintenance like plugin updates and
-              adding new features to sites, among other responsibilities.
-        </Description>
+              I am the Director of Technical Services at Tribeswell in
+              Bloomington, Indiana. My favorite part of going to work is
+              developing complex websites and solving all of the creative
+              problems that arise in the process. I also handle ongoing
+              maintenance like plugin updates and adding new features to sites,
+              among other responsibilities.
+            </Description>
           </GridCol>
           <GridCol column={50}>
             <ResumeLink
@@ -226,7 +224,7 @@ const Index = () => {
               target={`_blank`}
             >
               Download Relevant Résumé
-        </ResumeLink>
+            </ResumeLink>
           </GridCol>
           <GridCol column={50}>
             <ResumeLink
@@ -235,13 +233,12 @@ const Index = () => {
               target={`_blank`}
             >
               Download Complete Résumé
-        </ResumeLink>
+            </ResumeLink>
           </GridCol>
         </AboutMe>
       </Content>
     </Layout>
-  )
+  );
 };
-
 
 export default Index;

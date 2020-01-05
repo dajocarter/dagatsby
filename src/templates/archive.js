@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Layout from '../components/Layout'
+import Layout from "../components/Layout";
 import Content from "../components/styled/Content";
 import Article from "../components/styled/MarkdownBody";
 import ListItem from "../components/ListItem";

@@ -37,14 +37,14 @@ const Projects = () => {
         }
       }
     }
-  `)
+  `);
   return (
     <ArchiveTemplate
       title={`All Projects`}
       items={data.projects.edges}
       prefix={`projects`}
     />
-  )
+  );
 };
 
 export default Projects;

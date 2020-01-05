@@ -15,6 +15,6 @@ fairyGatesTheme.bodyFontFamily = [
   "sans-serif"
 ];
 const typography = new Typography(fairyGatesTheme);
-const { rhythm, scale } = typography
+const { rhythm, scale } = typography;
 
 export { rhythm, scale, typography as default };

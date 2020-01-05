@@ -37,10 +37,14 @@ const Posts = () => {
         }
       }
     }
-  `)
+  `);
   return (
-    <ArchiveTemplate title={`All Posts`} items={data.posts.edges} prefix={`posts`} />
-  )
+    <ArchiveTemplate
+      title={`All Posts`}
+      items={data.posts.edges}
+      prefix={`posts`}
+    />
+  );
 };
 
 export default Posts;

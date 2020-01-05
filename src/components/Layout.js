@@ -41,14 +41,14 @@ const Template = ({ children }) => {
         }
       }
     }
-  `)
+  `);
   return (
     <Body>
       <Header menuItems={data.allSitePage.edges} />
       <Main>{children}</Main>
       <Footer />
     </Body>
-  )
+  );
 };
 
 Template.propTypes = {

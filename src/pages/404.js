@@ -21,7 +21,7 @@ const FourOhFour = () => {
         }
       }
     }
-  `)
+  `);
   return (
     <Layout>
       <Content>
@@ -39,7 +39,7 @@ const FourOhFour = () => {
         </ul>
       </Content>
     </Layout>
-  )
+  );
 };
 
 export default FourOhFour;

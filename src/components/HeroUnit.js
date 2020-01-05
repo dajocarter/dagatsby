@@ -78,8 +78,8 @@ const HeroUnit = props => {
       {props.fluid ? (
         <HeroImg fluid={props.fluid} alt={props.alt} />
       ) : (
-          <HeroImg fixed={props.fixed} alt={props.alt} />
-        )}
+        <HeroImg fixed={props.fixed} alt={props.alt} />
+      )}
       {(props.headline || props.blurb) && (
         <HeroContent>
           {props.headline && <Headline>{props.headline}</Headline>}

@@ -3,7 +3,7 @@ import { graphql } from "gatsby";
 import Helmet from "react-helmet";
 import rehypeReact from "rehype-react";
 import styled from "styled-components";
-import Layout from '../components/Layout'
+import Layout from "../components/Layout";
 import Content from "../components/styled/Content";
 import MarkdownBody from "../components/styled/MarkdownBody";
 import MarkdownVideo from "../components/markdown/video/MarkdownVideo";
@@ -37,18 +37,14 @@ const Single = ({ data }) => (
     <Content>
       <Helmet>
         {/* General Tags */}
-        <title>{`${data.page.frontmatter.title} | ${
-          data.site.siteMetadata.title
-          }`}</title>
+        <title>{`${data.page.frontmatter.title} | ${data.site.siteMetadata.title}`}</title>
         <meta name="description" content={data.page.frontmatter.description} />
         <meta name="image" content={`${data.site.siteMetadata.url}`} />
         {/* Facebook Tags */}
         <meta property="og:title" content={data.page.frontmatter.title} />
         <meta
           property="og:url"
-          content={`${data.site.siteMetadata.url}/posts/${
-            data.page.frontmatter.slug
-            }`}
+          content={`${data.site.siteMetadata.url}/posts/${data.page.frontmatter.slug}`}
         />
         <meta
           property="og:description"
