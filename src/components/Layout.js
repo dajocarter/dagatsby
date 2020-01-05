@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { useStaticQuery, graphql } from "gatsby";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import styled from "styled-components";
@@ -28,32 +29,30 @@ const Main = styled.main`
   }
 `;
 
-const Template = ({ children, data, location }) => (
-  <Body>
-    <Header menuItems={data.allSitePage.edges} />
-    <Main>{children()}</Main>
-    <Footer />
-  </Body>
-);
-
-Template.propTypes = {
-  children: PropTypes.func,
-  data: PropTypes.object,
-  location: PropTypes.object,
-  route: PropTypes.object
-};
-
-export default Template;
-
-export const templateQuery = graphql`
-  query menuQuery {
-    allSitePage(filter: { path: { glob: "/*/" } }) {
-      edges {
-        node {
-          path
-          jsonName
+const Template = ({ children }) => {
+  const data = useStaticQuery(graphql`
+    query menuQuery {
+      allSitePage(filter: { path: { glob: "/*/" } }) {
+        edges {
+          node {
+            path
+            internalComponentName
+          }
         }
       }
     }
-  }
-`;
+  `)
+  return (
+    <Body>
+      <Header menuItems={data.allSitePage.edges} />
+      <Main>{children}</Main>
+      <Footer />
+    </Body>
+  )
+};
+
+Template.propTypes = {
+  children: PropTypes.object
+};
+
+export default Template;

@@ -1,6 +1,6 @@
 const path = require("path");
-exports.createPages = ({ boundActionCreators, graphql }) => {
-  const { createPage } = boundActionCreators;
+exports.createPages = ({ actions, graphql }) => {
+  const { createPage } = actions;
 
   return new Promise((resolve, reject) => {
     const pageTemplate = path.resolve("./src/templates/page.js");

@@ -13,7 +13,7 @@ const Overlay = styled.div`
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 15;
   height: 500px;
   background: rgba(0, 0, 0, 0.3);
 `;
@@ -23,7 +23,7 @@ const HeroImg = styled(Img)`
   top: 0;
   left: 0;
   width: 100%;
-  z-index: -1;
+  z-index: 10;
   height: 500px;
 
   & > img {
@@ -75,11 +75,11 @@ const HeroUnit = props => {
   return (
     <UnitContainer>
       <Overlay />
-      {props.sizes ? (
-        <HeroImg sizes={props.sizes} alt={props.alt} />
+      {props.fluid ? (
+        <HeroImg fluid={props.fluid} alt={props.alt} />
       ) : (
-        <HeroImg resolutions={props.resolutions} alt={props.alt} />
-      )}
+          <HeroImg fixed={props.fixed} alt={props.alt} />
+        )}
       {(props.headline || props.blurb) && (
         <HeroContent>
           {props.headline && <Headline>{props.headline}</Headline>}
@@ -92,17 +92,17 @@ const HeroUnit = props => {
 };
 
 HeroUnit.propTypes = {
-  sizes: (props, propName, componentName) => {
-    if (!props.sizes && !props.resolutions) {
+  fluid: (props, propName, componentName) => {
+    if (!props.fluid && !props.fixed) {
       return new Error(
-        `One of props 'sizes' or 'resolutions' was not specified in '${componentName}'.`
+        `One of props 'fluid' or 'fixed' was not specified in '${componentName}'.`
       );
     }
   },
-  resolutions: (props, propName, componentName) => {
-    if (!props.resolutions && !props.sizes) {
+  fixed: (props, propName, componentName) => {
+    if (!props.fixed && !props.fluid) {
       return new Error(
-        `One of props 'resolutions' or 'sizes' was not specified in '${componentName}'.`
+        `One of props 'fixed' or 'fluid' was not specified in '${componentName}'.`
       );
     }
   },
