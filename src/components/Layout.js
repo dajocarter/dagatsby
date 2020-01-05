@@ -36,7 +36,7 @@ const Template = ({ children }) => {
         edges {
           node {
             path
-            jsonName
+            internalComponentName
           }
         }
       }

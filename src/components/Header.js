@@ -129,7 +129,7 @@ const Header = props => (
           .map(({ node }) => (
             <MenuItem key={node.path}>
               <MenuItemLink to={node.path} activeClassName={`active`}>
-                {node.jsonName.slice(0, -5).replace(/\-/gi, " ")}
+                {node.internalComponentName.slice(9)}
               </MenuItemLink>
             </MenuItem>
           ))}
