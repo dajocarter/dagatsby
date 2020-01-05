@@ -1,11 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Anchor from "../components/styled/Anchor";
-import InstaIcon from "react-icons/lib/fa/instagram";
-import TwitterIcon from "react-icons/lib/fa/twitter";
-import LinkedinIcon from "react-icons/lib/fa/linkedin";
-import MailIcon from "react-icons/lib/fa/envelope";
-import GithubIcon from "react-icons/lib/fa/github-alt";
+import { FaInstagram as InstaIcon, FaTwitter as TwitterIcon, FaLinkedin as LinkedinIcon, FaEnvelope as MailIcon, FaGithubAlt as GithubIcon } from "react-icons/fa";
 
 const FooterContainer = styled.footer`
   background-color: #1d1e18;
