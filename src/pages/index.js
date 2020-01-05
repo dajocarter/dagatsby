@@ -15,9 +15,9 @@ const List = styled.div`
   text-align: center;
 `;
 
-const PostList = List.extend``;
+const PostList = styled(List)``;
 
-const ProjectList = List.extend`
+const ProjectList = styled(List)`
   background: #464642;
 `;
 
