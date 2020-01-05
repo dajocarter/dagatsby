@@ -1,4 +1,5 @@
 import React from "react";
+import { graphql } from "gatsby";
 import Helmet from "react-helmet";
 import Content from "../components/styled/Content";
 import MarkdownBody from "../components/styled/MarkdownBody";
@@ -6,9 +7,7 @@ import MarkdownBody from "../components/styled/MarkdownBody";
 const Page = ({ data }) => (
   <Content>
     <Helmet
-      title={`${data.markdownRemark.frontmatter.title} | ${
-        data.site.siteMetadata.title
-      }`}
+      title={`${data.markdownRemark.frontmatter.title} | ${data.site.siteMetadata.title}`}
     />
     <MarkdownBody
       dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}

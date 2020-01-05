@@ -1,4 +1,5 @@
 import React from "react";
+import { graphql } from "gatsby";
 import Helmet from "react-helmet";
 import rehypeReact from "rehype-react";
 import styled from "styled-components";
