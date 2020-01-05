@@ -181,7 +181,7 @@ const Index = () => {
           fluid={data.heroImg.childImageSharp.fluid}
           alt={``}
           headline={`David Carter`}
-          blurb={`Expert in Custom WordPress Development`}
+          blurb={`Software Engineer`}
         />
         <PostList>
           {data.posts.edges.map(({ node }, index) => (
