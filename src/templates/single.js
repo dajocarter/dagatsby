@@ -66,7 +66,7 @@ const Single = ({ data }) => (
         <meta name="twitter:image" content={`${data.site.siteMetadata.url}`} />
       </Helmet>
       <HeroUnit
-        sizes={data.page.frontmatter.image.childImageSharp.sizes}
+        fluid={data.page.frontmatter.image.childImageSharp.fluid}
         alt={``}
         headline={data.page.frontmatter.title}
         blurb={data.page.frontmatter.description}
@@ -107,8 +107,8 @@ export const singleQuery = graphql`
         description
         image {
           childImageSharp {
-            sizes {
-              ...GatsbyImageSharpSizes_noBase64
+            fluid {
+              ...GatsbyImageSharpFluid_noBase64
             }
           }
         }
